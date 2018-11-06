@@ -1,10 +1,10 @@
 ---
-title: "How to Use ezpickR"
+title: "How to Use ezpickr"
 author: "JooYoung Seo"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{How to Use ezpickR}
+  %\VignetteIndexEntry{How to Use ezpickr}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -37,24 +37,24 @@ if(!require(devtools)) {
 install.packages("devtools")
 }
 
-devtools::install_github('jooyoungseo/ezpickR')
+devtools::install_github('jooyoungseo/ezpickr')
 ```
 
 ## Stable Version
 
-You can install the released version of ezpickR from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of ezpickr from [CRAN](https://CRAN.R-project.org) with:
 
 ```{r, eval=F}
-install.packages("ezpickR")
+install.packages("ezpickr")
 ```
 
 
 # Basic Usage
 
-In order to use ezpickR do the folowing:
+In order to use ezpickr do the folowing:
 
 ```{r, eval=F}
-library(ezpickR)
+library(ezpickr)
 # Choosing file and saving it into a variable
 ## Scenario 1: Picking up a file using interactive GUI dialog box:
 data <- pick()
