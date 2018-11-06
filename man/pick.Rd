@@ -31,7 +31,7 @@ See example below.
 }
 \examples{
 \dontrun{
-library(ezpickR)
+library(ezpickr)
 # Choosing file and saving it into a variable
 ## Scenario 1: Picking up a file using interactive GUI dialog box:
 data <- pick()

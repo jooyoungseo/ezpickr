@@ -8,3 +8,4 @@
 0 errors | 0 warnings | 1 note
 
 * This is a new release.
+* I have fixed some typos in example codes, so please ignore the previous submission and consider this new one.

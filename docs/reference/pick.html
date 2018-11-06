@@ -64,7 +64,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ezpickr</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -90,6 +90,9 @@
       <a href="../articles/ezpickr_vignette.html">How to Use ezpickr</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -156,16 +159,16 @@ Each corresponding function depending upon a file extension will be automaticall
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>ezpickR</span>)
+<span class='fu'>library</span>(<span class='no'>ezpickr</span>)
 <span class='co'># Choosing file and saving it into a variable</span>
 <span class='co'>## Scenario 1: Picking up a file using interactive GUI dialog box:</span>
-<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/ezpickR/topics/pick'>pick</a></span>()
+<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/ezpickr/topics/pick'>pick</a></span>()
 
 <span class='co'>## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below;</span>
 <span class='co'>## however, you can feed other files through this function</span>
 <span class='co'>## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,</span>
 <span class='co'>## *.html, webpage URL, *doc, *.docx, *.pdf, *.rtf, *.json, *.Rda, *.Rdata, and more):</span>
-<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/ezpickR/topics/pick'>pick</a></span>(<span class='st'>"test.sav"</span>)
+<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/ezpickr/topics/pick'>pick</a></span>(<span class='st'>"test.sav"</span>)
 
 <span class='co'># Now you can use the imported file as a data frame.</span>
 <span class='fu'>str</span>(<span class='no'>data</span>)

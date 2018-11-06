@@ -24,7 +24,7 @@
 #' @examples
 
 #'\dontrun{
-#' library(ezpickR)
+#' library(ezpickr)
 #' # Choosing file and saving it into a variable
 #' ## Scenario 1: Picking up a file using interactive GUI dialog box:
 #' data <- pick()
@@ -75,7 +75,7 @@ function(file = NULL, ...) {   # Function starts:
 		"rtf" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = textreadr::read_rtf(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)), 
 		"doc" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = textreadr::read_doc(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)),
 		"docx" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = textreadr::read_docx(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)), 
-		stop("Sorry, but the file you have just chosen is not supported in this function. Report on this issue to the author (JooYoung Seo) at https://github.com/jooyoungseo/ezpickR/issues. :)")
+		stop("Sorry, but the file you have just chosen is not supported in this function. Report on this issue to the author (JooYoung Seo) at https://github.com/jooyoungseo/ezpickr/issues. :)")
 	)
 }   # Function ends.
 
