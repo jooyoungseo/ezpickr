@@ -32,7 +32,7 @@ Once you pick up your rectangular data file using `pick()` function, a tidy tibb
 
 You can install the latest development version as follows:
 
-```{r, eval=F}
+```{r, eval=FALSE}
 if(!require(devtools)) {
 install.packages("devtools")
 }
@@ -44,7 +44,7 @@ devtools::install_github('jooyoungseo/ezpickr')
 
 You can install the released version of ezpickr from [CRAN](https://CRAN.R-project.org) with:
 
-```{r, eval=F}
+```{r, eval=FALSE}
 install.packages("ezpickr")
 ```
 
@@ -53,7 +53,7 @@ install.packages("ezpickr")
 
 In order to use ezpickr do the folowing:
 
-```{r, eval=F}
+```{r, eval=FALSE}
 library(ezpickr)
 # Choosing file and saving it into a variable
 ## Scenario 1: Picking up a file using interactive GUI dialog box:

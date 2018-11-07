@@ -56,7 +56,7 @@ function(file = NULL, ...) {   # Function starts:
 		"csv" = readr::read_csv(file = fullFile, ...), 
 		"csv2" = readr::read_csv2(file = fullFile, ...), 
 		"tsv" = readr::read_tsv(file = fullFile, ...), 
-		"txt" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = readr::read_file(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)), 
+		"txt" = tibble::rowid_to_column(tibble::tibble(text = readr::read_file(fullFile, ...)), "paragraph"), 
 		"xlsx" = readxl::read_excel(fullFile, ...), 
 		"xls" = readxl::read_excel(fullFile, ...), 
 		"json" = jsonlite::fromJSON(fullFile, ...), 
@@ -68,13 +68,13 @@ function(file = NULL, ...) {   # Function starts:
 		"sas7bcat" = haven::read_sas(fullFile, ...), 
 		"por" = haven::read_por(fullFile, ...), 
 		"dta" = haven::read_dta(fullFile, ...), 
-		"html" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = textreadr::read_html(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)), 
-		"htm" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = textreadr::read_html(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)), 
-		"php" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = textreadr::read_document(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)), 
+		"html" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
+		"htm" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
+		"php" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
 		"pdf" = textreadr::read_pdf(fullFile, ...), 
-		"rtf" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = textreadr::read_rtf(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)), 
-		"doc" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = textreadr::read_doc(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)),
-		"docx" = tibble::as_tibble(dplyr::select(dplyr::mutate(data.frame(text = textreadr::read_docx(fullFile, ...)), paragraph = dplyr::row_number()), paragraph, text)), 
+		"rtf" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_rtf(fullFile, ...)), "paragraph"), 
+		"doc" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_doc(fullFile, ...)), "paragraph"), 
+		"docx" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_docx(fullFile, ...)), "paragraph"), 
 		stop("Sorry, but the file you have just chosen is not supported in this function. Report on this issue to the author (JooYoung Seo) at https://github.com/jooyoungseo/ezpickr/issues. :)")
 	)
 }   # Function ends.

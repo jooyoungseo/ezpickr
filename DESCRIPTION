@@ -5,7 +5,7 @@ Author: JooYoung Seo [aut, cre], Soyoung Choi [ctb]
 Maintainer: JooYoung Seo <jooyoung@psu.edu>
 Authors@R: c(person("JooYoung", "Seo", role=c("aut", "cre"), email="jooyoung@psu.edu"),
     person("Soyoung Choi", email = "sxc940@psu.edu", role = "ctb"))
-Description: Easy data importing for the most frequently used file formats in a tibble form.
+Description: Easy data importing for the most frequently used file formats in a 'tibble' form.
 License: GPL-2
 VignetteBuilder: knitr
 URL: https://github.com/jooyoungseo/ezpickr
