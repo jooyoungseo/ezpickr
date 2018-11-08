@@ -1,6 +1,15 @@
 
 # ezpickr: Convenient package/function for choosing any rectangular data file using interactive GUI dialog box
 
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+[![Travis build
+status](https://travis-ci.org/jooyoungseo/ezpickr.svg?branch=master)](https://travis-ci.org/jooyoungseo/ezpickr)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/jooyoungseo/ezpickr?branch=master&svg=true)](https://ci.appveyor.com/project/jooyoungseo/ezpickr)
+[![Codecov test
+coverage](https://codecov.io/gh/jooyoungseo/ezpickr/branch/master/graph/badge.svg)](https://codecov.io/gh/jooyoungseo/ezpickr?branch=master)
+
 The goal of ezpickr is to provide R beginners with a convenient way to
 pick up their data files and to easily import it as a tidy tibble form
 into an R environment using GUI file-picker dialogue box.

@@ -6,7 +6,7 @@ Maintainer: JooYoung Seo <jooyoung@psu.edu>
 Authors@R: c(person("JooYoung", "Seo", role=c("aut", "cre"), email="jooyoung@psu.edu"),
     person("Soyoung Choi", email = "sxc940@psu.edu", role = "ctb"))
 Description: Easy data importing for the most frequently used file formats in a 'tibble' form.
-License: GPL-2
+License: GPL-3
 VignetteBuilder: knitr
 URL: https://github.com/jooyoungseo/ezpickr
 BugReports: https://github.com/jooyoungseo/ezpickr/issues
@@ -32,4 +32,5 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
+    webshot,
     covr
