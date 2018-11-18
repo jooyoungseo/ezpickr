@@ -30,7 +30,6 @@ pick
 See example below.
 }
 \examples{
-\dontrun{
 library(ezpickr)
 # Choosing file and saving it into a variable
 ## Scenario 1: Picking up a file using interactive GUI dialog box:
@@ -40,13 +39,13 @@ data <- pick()
 ## however, you can feed other files through this function
 ## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,
 ## *.html, webpage URL, *doc, *.docx, *.pdf, *.rtf, *.json, *.Rda, *.Rdata, and more):
-data <- pick("test.sav")
+test <- system.file("extdata", "airquality.sav", package = "ezpickr")
+data <- pick(test)
 
-# Now you can use the imported file as a data frame.
+# Now you can use the imported file as a tibble.
 str(data)
 }
-}
 \author{
-JooYoung Seo (jooyoung@psu.edu)
+JooYoung Seo, \email{jooyoung@psu.edu}
 }
 \keyword{pick}

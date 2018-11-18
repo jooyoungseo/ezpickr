@@ -22,8 +22,6 @@
 #' @return tibble (table data.frame) object of the chosen rectangular data file will be returned.
 
 #' @examples
-
-#'\dontrun{
 #' library(ezpickr)
 #' # Choosing file and saving it into a variable
 #' ## Scenario 1: Picking up a file using interactive GUI dialog box:
@@ -33,13 +31,13 @@
 #' ## however, you can feed other files through this function
 #' ## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,
 #' ## *.html, webpage URL, *doc, *.docx, *.pdf, *.rtf, *.json, *.Rda, *.Rdata, and more):
-#' data <- pick("test.sav")
+#' test <- system.file("extdata", "airquality.sav", package = "ezpickr")
+#' data <- pick(test)
 #' 
-#' # Now you can use the imported file as a data frame.
+#' # Now you can use the imported file as a tibble.
 #' str(data)
-#'}
 
-#' @author JooYoung Seo (jooyoung@psu.edu)
+#' @author JooYoung Seo, \email{jooyoung@psu.edu}
 
 pick <-
 function(file = NULL, ...) {   # Function starts:
@@ -59,10 +57,10 @@ function(file = NULL, ...) {   # Function starts:
 		"txt" = tibble::rowid_to_column(tibble::tibble(text = readr::read_file(fullFile, ...)), "paragraph"), 
 		"xlsx" = readxl::read_excel(fullFile, ...), 
 		"xls" = readxl::read_excel(fullFile, ...), 
-		"json" = jsonlite::fromJSON(fullFile, ...), 
+		"json" = tibble::tibble(jsonlite::fromJSON(fullFile, ...)), 
 		"rdata" = load(file = fullFile, ...), 
-		"rda" = load(file = fullFile, ...), 
-		"rds" = readRDS(file = fullFile, ...), 
+		"rda" = tibble::tibble(load(file = fullFile, ...)), 
+		"rds" = tibble::tibble(readRDS(file = fullFile, ...)), 
 		"sav" = haven::read_sav(fullFile, ...), 
 		"sas7bdat" = haven::read_sas(fullFile, ...), 
 		"sas7bcat" = haven::read_sas(fullFile, ...), 
@@ -71,7 +69,7 @@ function(file = NULL, ...) {   # Function starts:
 		"html" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
 		"htm" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
 		"php" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
-		"pdf" = textreadr::read_pdf(fullFile, ...), 
+		"pdf" = tibble::tibble(textreadr::read_pdf(fullFile, ...)), 
 		"rtf" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_rtf(fullFile, ...)), "paragraph"), 
 		"doc" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_doc(fullFile, ...)), "paragraph"), 
 		"docx" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_docx(fullFile, ...)), "paragraph"), 

@@ -62,6 +62,6 @@ data <- pick()
 ## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL containing table, *.json, *.Rda, *.Rdata, and more):
 data <- pick("test.sav")
 
-# Now you can use the imported file as a data frame.
+# Now you can use the imported file as a tibble data frame.
 str(data)
 ```
