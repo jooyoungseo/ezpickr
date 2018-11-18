@@ -6,7 +6,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Import Various Data File Types as a Rectangular Form Using a File Picker Dialogue Box • ezpickr</title>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
@@ -19,7 +18,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-article">
+    <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -31,7 +30,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">ezpickr</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -79,18 +78,14 @@
 
       
       </header><div class="row">
-  <div class="col-md-9 contents">
-    
-
-    
-    
+  <div class="contents col-md-9">
 <div id="ezpickr-convenient-packagefunction-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#ezpickr-convenient-packagefunction-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box" class="anchor"></a>ezpickr: Convenient package/function for choosing any rectangular data file using interactive GUI dialog box</h1></div>
 
 <p>The goal of ezpickr is to provide R beginners with a convenient way to pick up their data files and to easily import it as a tidy tibble form into an R environment using GUI file-picker dialogue box.</p>
 <p>You can alternatively use this function for choosing <em>.csv, </em>.csv2, <em>.tsv, </em>.txt, <em>.xls, </em>.xlsx, <em>.json, </em>.html, <em>.htm, </em>.php, <em>.pdf, </em>.doc, <em>.docx, </em>.rtf, <em>.RData, </em>.Rda, <em>.RDS, </em>.sav (SPSS), <em>.por, </em>.sas7bdat, <em>.sas7bcat, and </em>.dta files in an interactive GUI mode A file choose dialog box will be prompted.</p>
-<p>Any additional arguments available for each file type and extension: <code><a href="http://www.rdocumentation.org/packages/readr/topics/read_delim">readr::read_csv()</a></code> for CSV (Comma-Separated Values) files; <code><a href="http://www.rdocumentation.org/packages/readr/topics/read_delim">readr::read_csv2()</a></code> for CSV2 (Semicolon-Separated Values) files; <code><a href="http://www.rdocumentation.org/packages/readr/topics/read_delim">readr::read_tsv()</a></code> for ‘TSV’ (Tab-Separated Values) files; <code><a href="http://www.rdocumentation.org/packages/readr/topics/read_file">readr::read_file()</a></code> for ‘txt’ (plain text) files; <code><a href="http://www.rdocumentation.org/packages/readxl/topics/read_excel">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="http://www.rdocumentation.org/packages/haven/topics/read_spss">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="http://www.rdocumentation.org/packages/haven/topics/read_dta">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="http://www.rdocumentation.org/packages/haven/topics/read_sas">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="http://www.rdocumentation.org/packages/textreadr/topics/read_document">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="http://www.rdocumentation.org/packages/jsonlite/topics/fromJSON">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="http://www.rdocumentation.org/packages/base/topics/readRDS">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="http://www.rdocumentation.org/packages/base/topics/load">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
+<p>Any additional arguments available for each file type and extension: <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv()</a></code> for CSV (Comma-Separated Values) files; <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv2()</a></code> for CSV2 (Semicolon-Separated Values) files; <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_tsv()</a></code> for ‘TSV’ (Tab-Separated Values) files; <code><a href="https://readr.tidyverse.org/reference/read_file.html">readr::read_file()</a></code> for ‘txt’ (plain text) files; <code><a href="https://www.rdocumentation.org/packages/readxl/topics/read_excel">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="https://www.rdocumentation.org/packages/haven/topics/read_spss">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="https://www.rdocumentation.org/packages/haven/topics/read_dta">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="https://www.rdocumentation.org/packages/haven/topics/read_sas">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="https://www.rdocumentation.org/packages/textreadr/topics/read_document">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="https://www.rdocumentation.org/packages/jsonlite/topics/fromJSON">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="https://www.rdocumentation.org/packages/base/topics/readRDS">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="https://www.rdocumentation.org/packages/base/topics/load">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
 <p>Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -99,24 +94,24 @@
 <h3 class="hasAnchor">
 <a href="#development-version" class="anchor"></a>Development Version</h3>
 <p>You can install the latest development version as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(devtools)) {</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">"devtools"</span>)</a>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="cf">if</span>(<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">require</a></span>(devtools)) {</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
 <a class="sourceLine" id="cb1-3" data-line-number="3">}</a>
 <a class="sourceLine" id="cb1-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">'jooyoungseo/ezpickr'</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb1-5" data-line-number="5">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">'jooyoungseo/ezpickr'</span>)</a></code></pre></div>
 </div>
 <div id="stable-version" class="section level3">
 <h3 class="hasAnchor">
 <a href="#stable-version" class="anchor"></a>Stable Version</h3>
 <p>You can install the released version of ezpickr from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">"ezpickr"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"ezpickr"</span>)</a></code></pre></div>
 </div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>This is a basic example which shows you how to import data files:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(ezpickr)</a>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ezpickr)</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co"># Choosing file and saving it into a variable</span></a>
 <a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">## Scenario 1: Picking up a file using interactive GUI dialog box:</span></a>
@@ -125,13 +120,13 @@
 <a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL containing table, *.json, *.Rda, *.Rdata, and more):</span></a>
 <a class="sourceLine" id="cb3-8" data-line-number="8">data &lt;-<span class="st"> </span><span class="kw"><a href="reference/pick.html">pick</a></span>(<span class="st">"test.sav"</span>)</a>
 <a class="sourceLine" id="cb3-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co"># Now you can use the imported file as a data frame.</span></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="kw">str</span>(data)</a></code></pre></div>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co"># Now you can use the imported file as a tibble data frame.</span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(data)</a></code></pre></div>
 </div>
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3" id="sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
@@ -155,7 +150,7 @@
 </ul>
 </div>
 
-      <div class="dev-status">
+  <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="http://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License: GPL v3"></a></li>
@@ -165,7 +160,6 @@
 </ul>
 </div>
 </div>
-
 </div>
 
 
@@ -174,7 +168,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>

@@ -22,15 +22,19 @@
 #' @return tibble (table data.frame) object of the chosen rectangular data file will be returned.
 
 #' @examples
-#' library(ezpickr)
+
 #' # Choosing file and saving it into a variable
+#'\dontrun{
 #' ## Scenario 1: Picking up a file using interactive GUI dialog box:
+#' library(ezpickr)
 #' data <- pick()
+#'}
 #' 
 #' ## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below;
 #' ## however, you can feed other files through this function
 #' ## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,
 #' ## *.html, webpage URL, *doc, *.docx, *.pdf, *.rtf, *.json, *.Rda, *.Rdata, and more):
+#' library(ezpickr)
 #' test <- system.file("extdata", "airquality.sav", package = "ezpickr")
 #' data <- pick(test)
 #' 

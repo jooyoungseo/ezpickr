@@ -8,8 +8,6 @@
 
 <title>Choosing any rectangular data file using interactive GUI dialog box. — pick • ezpickr</title>
 
-<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
@@ -64,7 +62,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ezpickr</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -139,11 +137,11 @@ Each corresponding function depending upon a file extension will be automaticall
     <tr>
       <th>...</th>
       <td><p>Any additional arguments available for each file type and extension:
-<a href='http://www.rdocumentation.org/packages/readr/topics/read_delim'>read_csv</a> for CSV (Comma-Separated Values) files; <a href='http://www.rdocumentation.org/packages/readr/topics/read_delim'>read_csv2</a> for CSV2 (Semicolon-Separated Values) files; 
-<a href='http://www.rdocumentation.org/packages/readr/topics/read_delim'>read_tsv</a> for 'TSV' (Tab-Separated Values) files; <a href='http://www.rdocumentation.org/packages/readr/topics/read_file'>read_file</a> for 'txt' (plain text) files; 
-<a href='http://www.rdocumentation.org/packages/readxl/topics/read_excel'>read_excel</a> for 'Excel' files; <a href='http://www.rdocumentation.org/packages/haven/topics/read_spss'>read_spss</a> for 'SPSS' files; <a href='http://www.rdocumentation.org/packages/haven/topics/read_dta'>read_stata</a> for 'Stata' files; 
-<a href='http://www.rdocumentation.org/packages/haven/topics/read_sas'>read_sas</a> for 'SAS' files; <a href='http://www.rdocumentation.org/packages/textreadr/topics/read_document'>read_document</a> for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files; 
-<a href='http://www.rdocumentation.org/packages/jsonlite/topics/fromJSON'>fromJSON</a> for 'JSON' files; <a href='http://www.rdocumentation.org/packages/base/topics/readRDS'>readRDS</a> for 'RDS' files; <a href='http://www.rdocumentation.org/packages/base/topics/load'>load</a> for 'RDA' and 'RDATA' files.</p></td>
+<a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a> for CSV (Comma-Separated Values) files; <a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv2</a> for CSV2 (Semicolon-Separated Values) files; 
+<a href='https://readr.tidyverse.org/reference/read_delim.html'>read_tsv</a> for 'TSV' (Tab-Separated Values) files; <a href='https://readr.tidyverse.org/reference/read_file.html'>read_file</a> for 'txt' (plain text) files; 
+<a href='https://www.rdocumentation.org/packages/readxl/topics/read_excel'>read_excel</a> for 'Excel' files; <a href='https://www.rdocumentation.org/packages/haven/topics/read_spss'>read_spss</a> for 'SPSS' files; <a href='https://www.rdocumentation.org/packages/haven/topics/read_dta'>read_stata</a> for 'Stata' files; 
+<a href='https://www.rdocumentation.org/packages/haven/topics/read_sas'>read_sas</a> for 'SAS' files; <a href='https://www.rdocumentation.org/packages/textreadr/topics/read_document'>read_document</a> for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files; 
+<a href='https://www.rdocumentation.org/packages/jsonlite/topics/fromJSON'>fromJSON</a> for 'JSON' files; <a href='https://www.rdocumentation.org/packages/base/topics/readRDS'>readRDS</a> for 'RDS' files; <a href='https://www.rdocumentation.org/packages/base/topics/load'>load</a> for 'RDA' and 'RDATA' files.</p></td>
     </tr>
     </table>
     
@@ -158,21 +156,34 @@ Each corresponding function depending upon a file extension will be automaticall
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>ezpickr</span>)
-<span class='co'># Choosing file and saving it into a variable</span>
+    <pre class="examples"><div class='input'># Choosing file and saving it into a variable
+</div><span class='co'># NOT RUN {</span>
 <span class='co'>## Scenario 1: Picking up a file using interactive GUI dialog box:</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>ezpickr</span>)
 <span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>pick</span>()
-
+<span class='co'># }</span><div class='input'>
 <span class='co'>## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below;</span>
 <span class='co'>## however, you can feed other files through this function</span>
 <span class='co'>## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,</span>
 <span class='co'>## *.html, webpage URL, *doc, *.docx, *.pdf, *.rtf, *.json, *.Rda, *.Rdata, and more):</span>
-<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>pick</span>(<span class='st'>"test.sav"</span>)
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>ezpickr</span>)
+<span class='no'>test</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"airquality.sav"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"ezpickr"</span>)
+<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>pick</span>(<span class='no'>test</span>)
 
-<span class='co'># Now you can use the imported file as a data frame.</span>
-<span class='fu'>str</span>(<span class='no'>data</span>)
-<span class='co'># }</span></pre>
+<span class='co'># Now you can use the imported file as a tibble.</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/str'>str</a></span>(<span class='no'>data</span>)</div><div class='output co'>#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':	153 obs. of  6 variables:
+#&gt;  $ Ozone  : num  41 36 12 18 NA 28 23 19 8 NA ...
+#&gt;   ..- attr(*, "format.spss")= chr "F8.0"
+#&gt;  $ Solar.R: num  190 118 149 313 NA NA 299 99 19 194 ...
+#&gt;   ..- attr(*, "format.spss")= chr "F8.0"
+#&gt;  $ Wind   : num  7.4 8 12.6 11.5 14.3 14.9 8.6 13.8 20.1 8.6 ...
+#&gt;   ..- attr(*, "format.spss")= chr "F8.2"
+#&gt;  $ Temp   : num  67 72 74 62 56 66 65 59 61 69 ...
+#&gt;   ..- attr(*, "format.spss")= chr "F8.0"
+#&gt;  $ Month  : num  5 5 5 5 5 5 5 5 5 5 ...
+#&gt;   ..- attr(*, "format.spss")= chr "F8.0"
+#&gt;  $ Day    : num  1 2 3 4 5 6 7 8 9 10 ...
+#&gt;   ..- attr(*, "format.spss")= chr "F8.0"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -187,9 +198,7 @@ Each corresponding function depending upon a file extension will be automaticall
     </ul>
 
     <h2>Author</h2>
-    
-JooYoung Seo (jooyoung@psu.edu)
-
+    <p>JooYoung Seo, <a href='mailto:jooyoung@psu.edu'>jooyoung@psu.edu</a></p>
   </div>
 </div>
 
@@ -199,7 +208,7 @@ JooYoung Seo (jooyoung@psu.edu)
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
