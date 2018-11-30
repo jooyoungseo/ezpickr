@@ -1,3 +1,5 @@
+# ezpickr 0.1.2
+
 # ezpickr 0.1.1
 
 * Providing a sample test file `airquality.sav` for an example purpose.
