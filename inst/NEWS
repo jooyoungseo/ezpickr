@@ -1,3 +1,8 @@
+# ezpickr 0.1.2
+
+* NEWS file is added to help HTML page.
+* Authorship fixed for Soyoung Choi from contributor to author role for her considerable help for the `pick()` function.
+
 # ezpickr 0.1.1
 
 * Providing a sample test file `airquality.sav` for an example purpose.

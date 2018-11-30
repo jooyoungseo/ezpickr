@@ -42,6 +42,7 @@
 #' str(data)
 
 #' @author JooYoung Seo, \email{jooyoung@psu.edu}
+#' @author Soyoung Choi, \email{sxc940@psu.edu}
 
 pick <-
 function(file = NULL, ...) {   # Function starts:

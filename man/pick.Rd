@@ -50,5 +50,7 @@ str(data)
 }
 \author{
 JooYoung Seo, \email{jooyoung@psu.edu}
+
+Soyoung Choi, \email{sxc940@psu.edu}
 }
 \keyword{pick}
