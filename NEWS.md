@@ -1,3 +1,5 @@
+# ezpickr 0.1.3
+
 # ezpickr 0.1.2
 
 * NEWS file is added to help HTML page.
