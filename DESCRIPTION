@@ -4,7 +4,7 @@ Version: 0.1.2
 Author: JooYoung Seo [aut, cre], Soyoung Choi [aut]
 Maintainer: JooYoung Seo <jooyoung@psu.edu>
 Authors@R: c(person("JooYoung", "Seo", role=c("aut", "cre"), email="jooyoung@psu.edu"),
-    person("Soyoung Choi", email = "sxc940@psu.edu", role = "aut"))
+    person("Soyoung", "Choi", role = "aut", email = "sxc940@psu.edu"))
 Description: Easy data importing for the most frequently used file formats in a 'tibble' form.
 License: GPL-3
 VignetteBuilder: knitr
@@ -15,22 +15,22 @@ LazyData: true
 Imports: 
     readr,
     haven,
-    rvest,
     jsonlite,
     readxl,
     magrittr,
-    xml2,
     textreadr,
-    tesseract,
-    docxtractr,
-    dplyr,
-    tibble,
-    striprtf,
-    antiword
+    tibble
 RoxygenNote: 6.1.0.9000
 Suggests: 
     testthat,
     knitr,
     rmarkdown,
     webshot,
+    striprtf,
+    xml2,
+    tesseract,
+    dplyr,
+    rvest,
+    docxtractr,
+    antiword,
     covr

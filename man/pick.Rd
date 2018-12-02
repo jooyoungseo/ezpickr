@@ -31,10 +31,12 @@ See example below.
 }
 \examples{
 # Choosing file and saving it into a variable
-\donttest{
+\dontrun{
 ## Scenario 1: Picking up a file using interactive GUI dialog box:
-library(ezpickr)
-data <- pick()
+if(interactive()) {
+  library(ezpickr)
+  data <- pick()
+}
 }
 
 ## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below;

@@ -7,4 +7,5 @@
 
 0 errors | 0 warnings | 1 note
 
-* This is a new release.
+* NEWS file is added to inst/NEWS to embed NEWS info into the HTML help page.
+* Authorship info has been updated.
