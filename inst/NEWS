@@ -1,3 +1,8 @@
+# ezpickr 0.1.3
+
+* Unused dependencies are moved to "suggest" from "import" field in the description file not to force unnecessary installation for users.
+* `interactive()` condition is added to the `pick()` example to avoid any error when called in a non-interactive testing environment.
+
 # ezpickr 0.1.2
 
 * NEWS file is added to help HTML page.

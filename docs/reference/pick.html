@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ezpickr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
       </span>
     </div>
 
@@ -158,13 +158,13 @@ Each corresponding function depending upon a file extension will be automaticall
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'># Choosing file and saving it into a variable
-</div><div class='input'><span class='co'>## Scenario 1: Picking up a file using interactive GUI dialog box:</span>
-<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>ezpickr</span>)
-<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>pick</span>()</div><div class='output co'>#&gt; <span class='message'>Parsed with column specification:</span>
-#&gt; <span class='message'>cols(</span>
-#&gt; <span class='message'>  sex = col_character(),</span>
-#&gt; <span class='message'>  score = col_double()</span>
-#&gt; <span class='message'>)</span></div><div class='input'>
+</div><span class='co'># NOT RUN {</span>
+<span class='co'>## Scenario 1: Picking up a file using interactive GUI dialog box:</span>
+<span class='kw'>if</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/interactive'>interactive</a></span>()) {
+  <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>ezpickr</span>)
+  <span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>pick</span>()
+}
+<span class='co'># }</span><div class='input'>
 <span class='co'>## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below;</span>
 <span class='co'>## however, you can feed other files through this function</span>
 <span class='co'>## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,</span>

@@ -7,5 +7,6 @@
 
 0 errors | 0 warnings | 1 note
 
-* NEWS file is added to inst/NEWS to embed NEWS info into the HTML help page.
-* Authorship info has been updated.
+* Unused dependencies are moved to "suggest" from "import" field in the description file not to force unnecessary installation for users.
+* `interactive()` condition is added to the `pick()` example to avoid any error when called in a non-interactive testing environment.
+
