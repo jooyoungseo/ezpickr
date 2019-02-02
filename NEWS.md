@@ -1,3 +1,5 @@
+# ezpickr 1.0.0
+
 # ezpickr 0.1.3
 
 * Unused dependencies are moved to "suggest" from "import" field in the description file not to force unnecessary installation for users.

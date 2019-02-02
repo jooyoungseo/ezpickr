@@ -1,6 +1,6 @@
 Package: ezpickr
 Title: Import Various Data File Types as a Rectangular Form Using a File Picker Dialogue Box
-Version: 0.1.3
+Version: 1.0.0
 Author: JooYoung Seo [aut, cre], Soyoung Choi [aut]
 Maintainer: JooYoung Seo <jooyoung@psu.edu>
 Authors@R: c(person("JooYoung", "Seo", role=c("aut", "cre"), email="jooyoung@psu.edu"),
