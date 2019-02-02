@@ -1,3 +1,5 @@
+# ezpickr 1.0.1
+
 # ezpickr 1.0.0
 
 * `mode` argument has been added to `pick()` function to accommodate Korean R users' needs in terms of R session locale and encoding to Korean. Available values include "ko1" for "CP949" and "ko2" for "UTF-8" while both change R locale into Korean.
