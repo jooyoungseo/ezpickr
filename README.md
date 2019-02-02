@@ -1,5 +1,5 @@
 
-# ezpickr: Convenient package/function for choosing any rectangular data file using interactive GUI dialog box
+# ezpickr: Convenient Package/Function for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and View Tidy Data in Preferable Spreadsheet
 
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
@@ -16,13 +16,16 @@ coverage](https://codecov.io/gh/jooyoungseo/ezpickr/branch/master/graph/badge.sv
 
 The goal of ezpickr is to provide R beginners with a convenient way to
 pick up their data files and to easily import it as a tidy tibble form
-into an R environment using GUI file-picker dialogue box.
+into an R environment using GUI file-picker dialogue box (through
+`ezpickr::pick()`), and to provide R users with convenient function to
+open their data objects with their preferable spreadsheet application
+window (e.g., Excel through `ezpickr::view()`).
 
-You can alternatively use this function for choosing *.csv, *.csv2,
-*.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php, *.pdf, *.doc,
-*.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por, *.sas7bdat,
-*.sas7bcat, and *.dta files in an interactive GUI mode A file choose
-dialog box will be prompted.
+You can alternatively use `ezpickr::pick()` function for choosing *.csv,
+*.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php,
+*.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por,
+*.sas7bdat, *.sas7bcat, and *.dta files in an interactive GUI mode A
+file choose dialog box will be prompted.
 
 Any additional arguments available for each file type and extension:
 `readr::read_csv()` for CSV (Comma-Separated Values) files;
@@ -65,6 +68,8 @@ install.packages("ezpickr")
 
 ## Example
 
+### Usage of the `pick()` Function
+
 This is a basic example which shows you how to import data files:
 
 ``` r
@@ -72,11 +77,28 @@ library(ezpickr)
 
 # Choosing file and saving it into a variable
 ## Scenario 1: Picking up a file using interactive GUI dialog box:
-data <- pick()
+data <- pick() ## Use either `pick(mode="ko1")` or `pick(mode="ko2")` for Korean R users.
 
 ## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL containing table, *.json, *.Rda, *.Rdata, and more):
-data <- pick("test.sav")
+data <- pick("test.sav") ## Use either `pick("test.sav", mode="ko1")` or `pick("test.sav", mode="ko2")` for Korean R users.
 
 # Now you can use the imported file as a tibble data frame.
 str(data)
+```
+
+### Usage of the `view()` Function
+
+You can open any data.frame, tibble, matrix, or vector from an R session
+into your default-set spreadsheet application window as follows:
+
+``` r
+library(ezpickr)
+
+data(airquality)
+str(airquality)
+
+# Use `view()` function to open your data object in your spreadsheet:
+view(airquality) ## If your data contains any Korean characters, use either `view(data_frame, mode="ko1")` or `view(data_frame, mode="ko2")`.
+
+# Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.
 ```

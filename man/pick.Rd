@@ -4,11 +4,13 @@
 \alias{pick}
 \title{Choosing any rectangular data file using interactive GUI dialog box.}
 \usage{
-pick(file = NULL, ...)
+pick(file = NULL, mode = NULL, ...)
 }
 \arguments{
 \item{file}{Either a path to a file, a connection, or literal data (either a single string or a raw vector). The default is NULL, which pops up an interactive GUI file choose dialogue box for users unless an explicit path/to/filename is given.
 Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.}
+
+\item{mode}{Character value; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" (default is the current locale and encoding of your R session).}
 
 \item{...}{Any additional arguments available for each file type and extension:
 \link[readr]{read_csv} for CSV (Comma-Separated Values) files; \link[readr]{read_csv2} for CSV2 (Semicolon-Separated Values) files; 
