@@ -88,8 +88,8 @@ str(data)
 
 ### Usage of the `view()` Function
 
-You can open any data.frame, tibble, matrix, or vector from an R session
-into your default-set spreadsheet application window as follows:
+You can open any data.frame, tibble, matrix, table or vector from an R
+session into your default-set spreadsheet application window as follows:
 
 ``` r
 library(ezpickr)

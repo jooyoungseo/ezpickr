@@ -4,10 +4,10 @@
 #' @aliases view
 #' @keywords view
 
-#' @description You can use this function for loading any data.frame, data_frame, tbl_df, matrix, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented Hadley Wickham's \code{\link[readr]{write_csv}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
+#' @description You can use this function for loading any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented Hadley Wickham's \code{\link[readr]{write_csv}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
 
 #' @export view
-#' @param x An object of class data.frame, matrix, or vector.
+#' @param x An object of class data.frame, matrix, table or vector.
 #' @param mode Character value for session locale and encoding; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" while both change R locale into Korean (default is the current locale and encoding of your R session).
 #' @param ... Any additional arguments available for \link[readr]{write_csv}.
 
@@ -17,7 +17,6 @@
 #' @return Data object opened in a preferable spreadsheet application window.
 
 #' @examples
-
 #' if(interactive()) {
 #' library(ezpickr)
 #' data(airquality)
@@ -48,7 +47,7 @@ function(x, mode = NULL, ...) {
 		}
 	}
 
-    if(is.matrix(x)) {
+    if(is.matrix(x) || is.table(x)) {
       x <- data.frame(x)
     }
 

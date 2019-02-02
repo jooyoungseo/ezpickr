@@ -7,7 +7,7 @@
 view(x, mode = NULL, ...)
 }
 \arguments{
-\item{x}{An object of class data.frame, matrix, or vector.}
+\item{x}{An object of class data.frame, matrix, table or vector.}
 
 \item{mode}{Character value for session locale and encoding; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" while both change R locale into Korean (default is the current locale and encoding of your R session).}
 
@@ -17,7 +17,7 @@ view(x, mode = NULL, ...)
 Data object opened in a preferable spreadsheet application window.
 }
 \description{
-You can use this function for loading any data.frame, data_frame, tbl_df, matrix, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented Hadley Wickham's \code{\link[readr]{write_csv}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
+You can use this function for loading any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented Hadley Wickham's \code{\link[readr]{write_csv}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
 }
 \details{
 view
