@@ -30,7 +30,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ezpickr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -83,7 +83,7 @@
       <h1>How to Use ezpickr</h1>
                         <h4 class="author">JooYoung Seo</h4>
             
-            <h4 class="date">2018-12-01</h4>
+            <h4 class="date">2019-02-02</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jooyoungseo/ezpickr/blob/master/vignettes/ezpickr_vignette.Rmd"><code>vignettes/ezpickr_vignette.Rmd</code></a></small>
       <div class="hidden name"><code>ezpickr_vignette.Rmd</code></div>
@@ -92,49 +92,68 @@
 
     
     
-<div id="convenient-function-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box" class="section level1">
+<div id="ezpickr-convenient-packagefunction-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box-and-view-tidy-data-in-preferable-spreadsheet" class="section level1">
 <h1 class="hasAnchor">
-<a href="#convenient-function-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box" class="anchor"></a>Convenient Function for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box</h1>
-<p>You can alternatively use this function for choosing <em>.csv, </em>.csv2, <em>.tsv, </em>.txt, <em>.xls, </em>.xlsx, <em>.json, </em>.html, <em>.htm, </em>.php, <em>.pdf, </em>.doc, <em>.docx, </em>.rtf, <em>.RData, </em>.Rda, <em>.RDS, </em>.sav (SPSS), <em>.por, </em>.sas7bdat, <em>.sas7bcat, and </em>.dta files in an interactive GUI mode A file choose dialog box will be prompted.</p>
-<p>Any additional arguments available for each file type and extension: <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv()</a></code> for CSV (Comma-Separated Values) files; <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv2()</a></code> for CSV2 (Semicolon-Separated Values) files; <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_tsv()</a></code> for ‘TSV’ (Tab-Separated Values) files; <code><a href="https://readr.tidyverse.org/reference/read_file.html">readr::read_file()</a></code> for ‘txt’ (plain text) files; <code><a href="https://www.rdocumentation.org/packages/readxl/topics/read_excel">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="https://www.rdocumentation.org/packages/haven/topics/read_spss">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="https://www.rdocumentation.org/packages/haven/topics/read_dta">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="https://www.rdocumentation.org/packages/haven/topics/read_sas">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="https://www.rdocumentation.org/packages/textreadr/topics/read_document">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="https://www.rdocumentation.org/packages/jsonlite/topics/fromJSON">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="https://www.rdocumentation.org/packages/base/topics/readRDS">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="https://www.rdocumentation.org/packages/base/topics/load">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
+<a href="#ezpickr-convenient-packagefunction-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box-and-view-tidy-data-in-preferable-spreadsheet" class="anchor"></a>ezpickr: Convenient Package/Function for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and View Tidy Data in Preferable Spreadsheet</h1>
+<p><a href="http://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License: GPL v3"></a> <a href="https://cran.r-project.org/package=ezpickr"><img src="https://www.r-pkg.org/badges/version/ezpickr" alt="CRAN status"></a> <a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a> <a href="https://travis-ci.org/jooyoungseo/ezpickr"><img src="https://travis-ci.org/jooyoungseo/ezpickr.svg?branch=master" alt="Travis build status"></a> <a href="https://ci.appveyor.com/project/jooyoungseo/ezpickr"><img src="https://ci.appveyor.com/api/projects/status/github/jooyoungseo/ezpickr?branch=master&amp;svg=true" alt="AppVeyor build status"></a> <a href="https://codecov.io/gh/jooyoungseo/ezpickr?branch=master"><img src="https://codecov.io/gh/jooyoungseo/ezpickr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></p>
+<p>The goal of ezpickr is to provide R beginners with a convenient way to pick up their data files and to easily import it as a tidy tibble form into an R environment using GUI file-picker dialogue box (through <code><a href="../reference/pick.html">ezpickr::pick()</a></code>), and to provide R users with convenient function to open their data objects with their preferable spreadsheet application window (e.g., Excel through <code><a href="../reference/view.html">ezpickr::view()</a></code>).</p>
+<p>You can alternatively use <code><a href="../reference/pick.html">ezpickr::pick()</a></code> function for choosing <em>.csv, </em>.csv2, <em>.tsv, </em>.txt, <em>.xls, </em>.xlsx, <em>.json, </em>.html, <em>.htm, </em>.php, <em>.pdf, </em>.doc, <em>.docx, </em>.rtf, <em>.RData, </em>.Rda, <em>.RDS, </em>.sav (SPSS), <em>.por, </em>.sas7bdat, <em>.sas7bcat, and </em>.dta files in an interactive GUI mode A file choose dialog box will be prompted.</p>
+<p>Any additional arguments available for each file type and extension: <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv()</a></code> for CSV (Comma-Separated Values) files; <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_csv2()</a></code> for CSV2 (Semicolon-Separated Values) files; <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_tsv()</a></code> for ‘TSV’ (Tab-Separated Values) files; <code><a href="https://readr.tidyverse.org/reference/read_file.html">readr::read_file()</a></code> for ‘txt’ (plain text) files; <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="https://haven.tidyverse.org/reference/read_spss.html">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="https://haven.tidyverse.org/reference/read_dta.html">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="https://haven.tidyverse.org/reference/read_sas.html">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="https://www.rdocumentation.org/packages/textreadr/topics/read_document">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="https://www.rdocumentation.org/packages/jsonlite/topics/fromJSON">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="https://www.rdocumentation.org/packages/base/topics/readRDS">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="https://www.rdocumentation.org/packages/base/topics/load">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
 <p>Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.</p>
-<p>Once you pick up your rectangular data file using <code><a href="../reference/pick.html">pick()</a></code> function, a tidy tibble (table data.frame) object will be returned automatically for your further analysis.</p>
-</div>
-<div id="installation" class="section level1">
-<h1 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h1>
-<div id="development-version" class="section level2">
+<div id="installation" class="section level2">
 <h2 class="hasAnchor">
-<a href="#development-version" class="anchor"></a>Development Version</h2>
+<a href="#installation" class="anchor"></a>Installation</h2>
+<div id="development-version" class="section level3">
+<h3 class="hasAnchor">
+<a href="#development-version" class="anchor"></a>Development Version</h3>
 <p>You can install the latest development version as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="cf">if</span>(<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">require</a></span>(devtools)) {</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">}</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">'jooyoungseo/ezpickr'</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">if</span>(<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">require</a></span>(devtools)) {</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
+<a class="sourceLine" id="cb1-3" title="3">}</a>
+<a class="sourceLine" id="cb1-4" title="4"></a>
+<a class="sourceLine" id="cb1-5" title="5">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">'jooyoungseo/ezpickr'</span>)</a></code></pre></div>
 </div>
-<div id="stable-version" class="section level2">
-<h2 class="hasAnchor">
-<a href="#stable-version" class="anchor"></a>Stable Version</h2>
+<div id="stable-version" class="section level3">
+<h3 class="hasAnchor">
+<a href="#stable-version" class="anchor"></a>Stable Version</h3>
 <p>You can install the released version of ezpickr from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"ezpickr"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"ezpickr"</span>)</a></code></pre></div>
 </div>
 </div>
-<div id="basic-usage" class="section level1">
-<h1 class="hasAnchor">
-<a href="#basic-usage" class="anchor"></a>Basic Usage</h1>
-<p>In order to use ezpickr do the folowing:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ezpickr)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co"># Choosing file and saving it into a variable</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">## Scenario 1: Picking up a file using interactive GUI dialog box:</span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">data &lt;-<span class="st"> </span><span class="kw"><a href="../reference/pick.html">pick</a></span>()</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL containing table, *.json, *.Rda, *.Rdata, and more):</span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">test &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"airquality.sav"</span>, <span class="dt">package =</span> <span class="st">"ezpickr"</span>)</a>
-<a class="sourceLine" id="cb3-8" data-line-number="8">data &lt;-<span class="st"> </span><span class="kw"><a href="../reference/pick.html">pick</a></span>(test)</a>
-<a class="sourceLine" id="cb3-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co"># Now you can use the imported file as a tibble data frame.</span></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(data)</a></code></pre></div>
+<div id="example" class="section level2">
+<h2 class="hasAnchor">
+<a href="#example" class="anchor"></a>Example</h2>
+<div id="usage-of-the-pick-function" class="section level3">
+<h3 class="hasAnchor">
+<a href="#usage-of-the-pick-function" class="anchor"></a>Usage of the <code><a href="../reference/pick.html">pick()</a></code> Function</h3>
+<p>This is a basic example which shows you how to import data files:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ezpickr)</a>
+<a class="sourceLine" id="cb3-2" title="2"></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="co"># Choosing file and saving it into a variable</span></a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="co">## Scenario 1: Picking up a file using interactive GUI dialog box:</span></a>
+<a class="sourceLine" id="cb3-5" title="5">data &lt;-<span class="st"> </span><span class="kw"><a href="../reference/pick.html">pick</a></span>() <span class="co">## Use either `pick(mode="ko1")` or `pick(mode="ko2")` for Korean R users.</span></a>
+<a class="sourceLine" id="cb3-6" title="6"></a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="co">## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL containing table, *.json, *.Rda, *.Rdata, and more):</span></a>
+<a class="sourceLine" id="cb3-8" title="8">data &lt;-<span class="st"> </span><span class="kw"><a href="../reference/pick.html">pick</a></span>(<span class="st">"test.sav"</span>) <span class="co">## Use either `pick("test.sav", mode="ko1")` or `pick("test.sav", mode="ko2")` for Korean R users.</span></a>
+<a class="sourceLine" id="cb3-9" title="9"></a>
+<a class="sourceLine" id="cb3-10" title="10"><span class="co"># Now you can use the imported file as a tibble data frame.</span></a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(data)</a></code></pre></div>
+</div>
+<div id="usage-of-the-view-function" class="section level3">
+<h3 class="hasAnchor">
+<a href="#usage-of-the-view-function" class="anchor"></a>Usage of the <code><a href="../reference/view.html">view()</a></code> Function</h3>
+<p>You can open any data.frame, tibble, matrix, or vector from an R session into your default-set spreadsheet application window as follows:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ezpickr)</a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/data">data</a></span>(airquality)</a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(airquality)</a>
+<a class="sourceLine" id="cb4-5" title="5"></a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="co"># Use `view()` function to open your data object in your spreadsheet:</span></a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="kw"><a href="../reference/view.html">view</a></span>(airquality) <span class="co">## If your data contains any Korean characters, use either `view(data_frame, mode="ko1")` or `view(data_frame, mode="ko2")`.</span></a>
+<a class="sourceLine" id="cb4-8" title="8"></a>
+<a class="sourceLine" id="cb4-9" title="9"><span class="co"># Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.</span></a></code></pre></div>
+</div>
+</div>
 </div>
   </div>
 
@@ -143,14 +162,12 @@
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#convenient-function-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box">Convenient Function for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box</a></li>
-      <li>
-<a href="#installation">Installation</a><ul class="nav nav-pills nav-stacked">
-<li><a href="#development-version">Development Version</a></li>
-      <li><a href="#stable-version">Stable Version</a></li>
+<li>
+<a href="#ezpickr-convenient-packagefunction-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box-and-view-tidy-data-in-preferable-spreadsheet">ezpickr: Convenient Package/Function for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and View Tidy Data in Preferable Spreadsheet</a><ul class="nav nav-pills nav-stacked">
+<li><a href="#installation">Installation</a></li>
+      <li><a href="#example">Example</a></li>
       </ul>
 </li>
-      <li><a href="#basic-usage">Basic Usage</a></li>
       </ul>
 </div>
       </div>
@@ -163,7 +180,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.2.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
 </div>
       </footer>
 </div>

@@ -19,7 +19,8 @@ Imports:
     readxl,
     magrittr,
     textreadr,
-    tibble
+    tibble,
+    stringr
 RoxygenNote: 6.1.1.9000
 Suggests: 
     testthat,

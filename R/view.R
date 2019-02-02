@@ -8,7 +8,7 @@
 
 #' @export view
 #' @param x An object of class data.frame, matrix, or vector.
-#' @param mode Character value for session locale and encoding; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" (default is the current locale and encoding of your R session).
+#' @param mode Character value for session locale and encoding; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" while both change R locale into Korean (default is the current locale and encoding of your R session).
 #' @param ... Any additional arguments available for \link[readr]{write_csv}.
 
 #' @details
@@ -24,7 +24,8 @@
 #' str(airquality)
 
 #' ## View your data object in your spreadsheet software:
-#' view(airquality) ## If your data contains any Korean characters, use either `view(data_frame, mode="ko1")` or `view(data_frame, mode="ko2")`.
+#' # Please use additional argument: either `mode="ko1"` or `mode="ko2"` for Korean dataset.
+#' view(airquality)
 #' # Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.
 #' }
 

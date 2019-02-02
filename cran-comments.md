@@ -7,6 +7,6 @@
 
 0 errors | 0 warnings | 1 note
 
-* Unused dependencies are moved to "suggest" from "import" field in the description file not to force unnecessary installation for users.
-* `interactive()` condition is added to the `pick()` example to avoid any error when called in a non-interactive testing environment.
+* `mode` argument has been added to `pick()` function to accommodate Korean R users' needs in terms of R session locale and encoding to Korean. Available values include "ko1" for "CP949" and "ko2" for "UTF-8" while both change R locale into Korean.
+* `view()` function has been newly added to provide R beginners with a convenient way to place their data in a spread sheet application.
 
