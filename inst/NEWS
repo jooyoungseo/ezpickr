@@ -1,6 +1,8 @@
 # ezpickr 1.0.1
 
 * `table` object is now supported in `view()` function by automatically converting it into data.frame object.
+* Startup message has been added to the package so that Korean R users can benefit from `mode` option when interacting with Korean-included dataset.
+
 
 # ezpickr 1.0.0
 
