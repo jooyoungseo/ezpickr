@@ -73,8 +73,8 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 		"csv2" = readr::read_csv2(file = fullFile, ...), 
 		"tsv" = readr::read_tsv(file = fullFile, ...), 
 		"txt" = tibble::rowid_to_column(tibble::tibble(text = readr::read_file(fullFile, ...)), "paragraph"), 
-		"xlsx" = readxl::read_excel(fullFile, ...), 
-		"xls" = readxl::read_excel(fullFile, ...), 
+		"xlsx" = if(length(readxl::excel_sheets(path=fullFile)) > 1) {lapply(readxl::excel_sheets(path=fullFile), readxl::read_excel, path=fullFile, ...)} else {readxl::read_excel(fullFile, ...)}, 
+		"xls" = if(length(readxl::excel_sheets(path=fullFile)) > 1) {lapply(readxl::excel_sheets(path=fullFile), readxl::read_excel, path=fullFile, ...)} else {readxl::read_excel(fullFile, ...)}, 
 		"json" = tibble::tibble(jsonlite::fromJSON(fullFile, ...)), 
 		"rdata" = load(file = fullFile, ...), 
 		"rda" = tibble::tibble(load(file = fullFile, ...)), 
@@ -91,7 +91,8 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 		"rtf" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_rtf(fullFile, ...)), "paragraph"), 
 		"doc" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_doc(fullFile, ...)), "paragraph"), 
 		"docx" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_docx(fullFile, ...)), "paragraph"), 
-		stop("Sorry, but the file you have just chosen is not supported in this function. Report on this issue to the author (JooYoung Seo) at https://github.com/jooyoungseo/ezpickr/issues. :)")
+		stop("Sorry, but the file you have just chosen is not supported in this function. Report on this issue to the author (JooYoung Seo) at \n
+		https://github.com/jooyoungseo/ezpickr/issues. :)")
 	)
 }   # Function ends.
 
