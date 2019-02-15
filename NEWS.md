@@ -1,8 +1,9 @@
 # ezpickr 1.0.1
 
-* `pick()` function now automatically returns an Excel file that contains more than one sheet as a list of each Work Sheet.
+* `pick()` function now automatically returns an Excel file that contains more than one sheet as a list of each Work Sheet (Thanks hyun seung Lee for the suggestion via email).
 * `table` object is now supported in `view()` function by automatically converting it into data.frame object.
 * Startup message has been added to the package so that Korean R users can benefit from `mode` option when interacting with Korean-included dataset.
+* A more robust mechanism has been applied to a file path that contains any Korean characters.
 
 
 # ezpickr 1.0.0
@@ -16,10 +17,12 @@
 * Unused dependencies are moved to "suggest" from "import" field in the description file not to force unnecessary installation for users.
 * `interactive()` condition is added to the `pick()` example to avoid any error when called in a non-interactive testing environment.
 
+
 # ezpickr 0.1.2
 
 * NEWS file is added to help HTML page.
 * Authorship fixed for Soyoung Choi from contributor to author role for her considerable help for the `pick()` function.
+
 
 # ezpickr 0.1.1
 

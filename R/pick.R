@@ -50,20 +50,22 @@
 pick <-
 function(file = NULL, mode = NULL, ...) {   # Function starts:
 
-	if(!is.null(mode)) {
-		if(mode == "ko1") {
-			Sys.setlocale("LC_ALL", "Korean")
-			options(encoding="CP949")
-		} else if(mode == "ko2") {
-			Sys.setlocale("LC_ALL", "Korean")
-			options(encoding="UTF-8")
-		}
-	}
-
 	if (is.null(file)) {
 		fullFile <- file.choose()
 	} else {
 		fullFile <- file
+	}
+
+	if(!is.null(mode)) {
+		if(mode == "ko1") {
+			Sys.setlocale("LC_ALL", "Korean")
+			options(encoding="CP949")
+			fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
+		} else if(mode == "ko2") {
+			Sys.setlocale("LC_ALL", "Korean")
+			options(encoding="UTF-8")
+			fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
+		}
 	}
 
 	fileExt <- tools::file_ext(fullFile)

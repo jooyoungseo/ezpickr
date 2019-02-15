@@ -24,5 +24,10 @@ Authors:
   \item Soyoung Choi \email{sxc940@psu.edu}
 }
 
+Other contributors:
+\itemize{
+  \item hyun seung Lee \email{go4arsenal@gmail.com} [contributor]
+}
+
 }
 \keyword{internal}

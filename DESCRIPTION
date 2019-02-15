@@ -1,10 +1,11 @@
 Package: ezpickr
 Title: Import Various Data File Types as a Rectangular Form Using a File Picker Dialogue Box
 Version: 1.0.1
-Author: JooYoung Seo [aut, cre], Soyoung Choi [aut]
+Author: JooYoung Seo [aut, cre], Soyoung Choi [aut], hyun seung Lee [ctb]
 Maintainer: JooYoung Seo <jooyoung@psu.edu>
 Authors@R: c(person("JooYoung", "Seo", role=c("aut", "cre"), email="jooyoung@psu.edu"),
-    person("Soyoung", "Choi", role = "aut", email = "sxc940@psu.edu"))
+    person("Soyoung", "Choi", role = "aut", email = "sxc940@psu.edu"),
+    person("hyun seung", "Lee", role = "ctb", email = "go4arsenal@gmail.com"))
 Description: Easy data importing for the most frequently used file formats in a 'tibble' form.
 License: GPL-3
 VignetteBuilder: knitr
