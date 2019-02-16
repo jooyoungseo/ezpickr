@@ -1,3 +1,5 @@
+# ezpickr (development version)
+
 # ezpickr 1.0.1
 
 * New function `picko()` has been added to assist Korean R users in importing Korean-included `path/to/file` as an alternative of `pick()` function; other non-Korean R users can still employ the existing `pick()` function.
