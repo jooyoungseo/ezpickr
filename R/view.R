@@ -8,8 +8,7 @@
 
 #' @export view
 #' @param x An object of class data.frame, matrix, table or vector.
-#' @param mode Character value for session locale and encoding; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" while both change R locale into Korean (default is the current locale and encoding of your R session).
-#' @param ... Any additional arguments available for \link[readr]{write_csv}.
+#' @param ... Any additional arguments available for \link[writexl]{write_xlsx}.
 
 #' @details
 #' See example below.
@@ -23,9 +22,13 @@
 #' str(airquality)
 
 #' ## View your data object in your spreadsheet software:
-#' # Please use additional argument: either `mode="ko1"` or `mode="ko2"` for Korean dataset.
 #' view(airquality)
 #' # Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.
+#' 
+#' # You can pass a list object to the `view()` function like below:
+#' l <- list(iris = iris, mtcars = mtcars, chickwts = chickwts, quakes = quakes)
+#' view(l)
+#' # Then, each list item will appear in your Excel window sheet by sheet.
 #' }
 
 #' @author JooYoung Seo, \email{jooyoung@psu.edu}
@@ -33,19 +36,10 @@
 
 # Function starts:
 view <- 
-function(x, mode = NULL, ...) {
+function(x, ...) {
 
       # only for interactive sessions
   if (interactive()) {
-	if(!is.null(mode)) {
-		if(mode == "ko1") {
-			Sys.setlocale("LC_ALL", "Korean")
-			options(encoding="CP949")
-		} else if(mode == "ko2") {
-			Sys.setlocale("LC_ALL", "Korean")
-			options(encoding="UTF-8")
-		}
-	}
 
     if(is.matrix(x) || is.table(x)) {
       x <- data.frame(x)

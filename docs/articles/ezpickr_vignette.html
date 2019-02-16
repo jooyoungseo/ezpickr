@@ -149,9 +149,13 @@
 <a class="sourceLine" id="cb4-4" title="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(airquality)</a>
 <a class="sourceLine" id="cb4-5" title="5"></a>
 <a class="sourceLine" id="cb4-6" title="6"><span class="co"># Use `view()` function to open your data object in your spreadsheet:</span></a>
-<a class="sourceLine" id="cb4-7" title="7"><span class="kw"><a href="../reference/view.html">view</a></span>(airquality) <span class="co">## If your data contains any Korean characters, use either `view(data_frame, mode="ko1")` or `view(data_frame, mode="ko2")`.</span></a>
-<a class="sourceLine" id="cb4-8" title="8"></a>
-<a class="sourceLine" id="cb4-9" title="9"><span class="co"># Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.</span></a></code></pre></div>
+<a class="sourceLine" id="cb4-7" title="7"><span class="kw"><a href="../reference/view.html">view</a></span>(airquality)</a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="co"># Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.</span></a>
+<a class="sourceLine" id="cb4-9" title="9"></a>
+<a class="sourceLine" id="cb4-10" title="10"><span class="co"># You can pass a list object to the `view()` function like below:</span></a>
+<a class="sourceLine" id="cb4-11" title="11">l &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">iris =</span> iris, <span class="dt">mtcars =</span> mtcars, <span class="dt">chickwts =</span> chickwts, <span class="dt">quakes =</span> quakes)</a>
+<a class="sourceLine" id="cb4-12" title="12"><span class="kw"><a href="../reference/view.html">view</a></span>(l)</a>
+<a class="sourceLine" id="cb4-13" title="13"><span class="co"># Then, each list item will appear in your Excel window sheet by sheet.</span></a></code></pre></div>
 </div>
 </div>
 </div>

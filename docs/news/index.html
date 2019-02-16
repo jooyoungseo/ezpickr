@@ -125,7 +125,7 @@
 <li>
 <code><a href="../reference/pick.html">pick()</a></code> and <code><a href="../reference/picko.html">picko()</a></code> functions now automatically return an Excel file that contains more than one sheet as a list of each Work Sheet (Thanks hyun seung Lee for the suggestion via email).</li>
 <li>
-<code><a href="../reference/view.html">view()</a></code> function now internally employs <code><a href="https://www.rdocumentation.org/packages/writexl/topics/write_xlsx">writexl::write_xlsx()</a></code> function instead of <code><a href="https://readr.tidyverse.org/reference/write_delim.html">readr::write_csv()</a></code> to create Microsoft Excel file to provide users with a stable encoding consistency.</li>
+<code><a href="../reference/view.html">view()</a></code> function now internally employs <code><a href="https://www.rdocumentation.org/packages/writexl/topics/write_xlsx">writexl::write_xlsx()</a></code> function instead of <code><a href="https://readr.tidyverse.org/reference/write_delim.html">readr::write_csv()</a></code> to create Microsoft Excel file to provide users with a stable encoding consistency; since this change, <code>mode</code> option of the <code><a href="../reference/view.html">view()</a></code> function has been removed.</li>
 <li>
 <code>table</code> class is now supported in <code><a href="../reference/view.html">view()</a></code> function by automatically converting it into data.frame class.</li>
 <li>Startup message has been added to the package so that Korean R users can benefit from the newly developed <code><a href="../reference/picko.html">picko()</a></code> function when interacting with Korean-included dataset.</li>
