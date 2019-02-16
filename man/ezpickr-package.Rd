@@ -27,6 +27,7 @@ Authors:
 Other contributors:
 \itemize{
   \item hyun seung Lee \email{go4arsenal@gmail.com} [contributor]
+  \item Jonghoen Kim \email{cysics@daum.net} [contributor]
 }
 
 }

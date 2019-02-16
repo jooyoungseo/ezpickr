@@ -120,12 +120,15 @@
 <a href="#ezpickr-101" class="anchor"></a>ezpickr 1.0.1<small> Unreleased </small>
 </h1>
 <ul>
-<li>
-<code><a href="../reference/pick.html">pick()</a></code> function now automatically returns an Excel file that contains more than one sheet as a list of each Work Sheet (Thanks hyun seung Lee for the suggestion via email).</li>
-<li>
-<code>table</code> object is now supported in <code><a href="../reference/view.html">view()</a></code> function by automatically converting it into data.frame object.</li>
-<li>Startup message has been added to the package so that Korean R users can benefit from <code>mode</code> option when interacting with Korean-included dataset.</li>
+<li>New function <code><a href="../reference/picko.html">picko()</a></code> has been added to assist Korean R users in importing Korean-included <code>path/to/file</code> as an alternative of <code><a href="../reference/pick.html">pick()</a></code> function; other non-Korean R users can still employ the existing <code><a href="../reference/pick.html">pick()</a></code> function.</li>
 <li>A more robust mechanism has been applied to a file path that contains any Korean characters.</li>
+<li>
+<code><a href="../reference/pick.html">pick()</a></code> and <code><a href="../reference/picko.html">picko()</a></code> functions now automatically return an Excel file that contains more than one sheet as a list of each Work Sheet (Thanks hyun seung Lee for the suggestion via email).</li>
+<li>
+<code><a href="../reference/view.html">view()</a></code> function now internally employs <code><a href="https://www.rdocumentation.org/packages/writexl/topics/write_xlsx">writexl::write_xlsx()</a></code> function instead of <code><a href="https://readr.tidyverse.org/reference/write_delim.html">readr::write_csv()</a></code> to create Microsoft Excel file to provide users with a stable encoding consistency.</li>
+<li>
+<code>table</code> class is now supported in <code><a href="../reference/view.html">view()</a></code> function by automatically converting it into data.frame class.</li>
+<li>Startup message has been added to the package so that Korean R users can benefit from the newly developed <code><a href="../reference/picko.html">picko()</a></code> function when interacting with Korean-included dataset.</li>
 </ul>
 </div>
     <div id="ezpickr-100" class="section level1">

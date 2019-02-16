@@ -1,15 +1,14 @@
-#' pick
-#' @title Choosing any rectangular data file using interactive GUI dialog box.
+#' picko
+#' @title Choosing any rectangular Korean data file using interactive GUI dialog box.
 
-#' @aliases pick
-#' @keywords pick
+#' @aliases picko
+#' @keywords picko
 
-#' @description You can alternatively use this function for choosing *.csv, *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php, *.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por, *.sas7bdat, *.sas7bcat, and *.dta files in an interactive GUI mode A file choose dialog box will be prompted.
+#' @description The basic functionality is exactly the same as \link[ezpickr]{pick}, but optimized for Korean R users.
 
-#' @export pick
+#' @export picko
 #' @param file Either a path to a file, a connection, or literal data (either a single string or a raw vector). The default is NULL, which pops up an interactive GUI file choose dialogue box for users unless an explicit path/to/filename is given.
 #' Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.
-#' @param mode Character value for session locale and encoding; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" while both change R locale into Korean (default is the current locale and encoding of your R session).
 #' @param ... Any additional arguments available for each file type and extension:
 #' \link[readr]{read_csv} for CSV (Comma-Separated Values) files; \link[readr]{read_csv2} for CSV2 (Semicolon-Separated Values) files; 
 #' \link[readr]{read_tsv} for 'TSV' (Tab-Separated Values) files; \link[readr]{read_file} for 'txt' (plain text) files; 
@@ -21,33 +20,33 @@
 #' See example below.
 
 #' @return tibble (table data.frame) object of the chosen rectangular data file will be returned.
-#' @seealso [picko] for more convenient use for Korean users.
+#' @seealso [pick] for more details on basic functionality.
 #' @examples
 #' # Choosing file and saving it into a variable
 #' ## Scenario 1: Picking up a file using interactive GUI dialog box:
 #' if(interactive()) {
 #'   library(ezpickr)
-#' ## Use either `pick(mode="ko1")` or `pick(mode="ko2")` for Korean R users.
-#'   data <- pick() 
+#'   data <- picko()
 #' }
 #' 
 #' ## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below;
 #' ## however, you can feed other files through this function
 #' ## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,
 #' ## *.html, webpage URL, *doc, *.docx, *.pdf, *.rtf, *.json, *.Rda, *.Rdata, and more):
+#' if(interactive()) {
 #' library(ezpickr)
 #' test <- system.file("extdata", "airquality.sav", package = "ezpickr")
-#' ## Use either `pick(test, mode="ko1")` or `pick(test, mode="ko2")` for Korean R users.
-#' data <- pick(test)
+#' data <- picko(test)
 #' 
 #' # Now you can use the imported file as a tibble.
 #' str(data)
+#' }
 
 #' @author JooYoung Seo, \email{jooyoung@psu.edu}
 #' @author Soyoung Choi, \email{sxc940@psu.edu}
 
-pick <-
-function(file = NULL, mode = NULL, ...) {   # Function starts:
+picko <-
+function(file = NULL, ...) {   # Function starts:
 
 	if (is.null(file)) {
 		fullFile <- file.choose()
@@ -55,16 +54,14 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 		fullFile <- file
 	}
 
-	if(!is.null(mode)) {
-		if(mode == "ko1") {
-			Sys.setlocale("LC_ALL", "Korean")
-			options(encoding="CP949")
-			fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
-		} else if(mode == "ko2") {
-			Sys.setlocale("LC_ALL", "Korean")
-			options(encoding="UTF-8")
-			fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
-		}
+	if(.Platform$OS.type == "windows") {
+		Sys.setlocale("LC_ALL", "Korean")
+		options(encoding="CP949")
+		fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
+	} else {
+		Sys.setlocale("LC_ALL", "Korean")
+		options(encoding="UTF-8")
+		fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
 	}
 
 	fileExt <- tools::file_ext(fullFile)

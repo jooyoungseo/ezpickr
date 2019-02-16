@@ -4,7 +4,7 @@
 #' @aliases view
 #' @keywords view
 
-#' @description You can use this function for loading any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented Hadley Wickham's \code{\link[readr]{write_csv}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
+#' @description You can use this function for loading any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented \code{\link[writexl]{write_xlsx}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
 
 #' @export view
 #' @param x An object of class data.frame, matrix, table or vector.
@@ -51,28 +51,28 @@ function(x, mode = NULL, ...) {
       x <- data.frame(x)
     }
 
-    tmp <- tempfile(fileext = ".csv")
-    readr::write_csv(x, tmp, ...)
+    tmp <- tempfile(fileext = ".xlsx")
+    writexl::write_xlsx(x, tmp, ...)
     utils::browseURL(tmp)
 
     Sys.sleep(5)
     file <- readline("Enter the file name you want to save as (press enter to skip): ")
 
     if(file != "") {
-      if(!stringr::str_detect(file, "(.csv)$")) {
-        new_file <- paste0(file, ".csv")
+      if(!stringr::str_detect(file, "(.xlsx)$")) {
+        new_file <- paste0(file, ".xlsx")
       } else {
         new_file <- file
       }
 
       file.copy(from=tmp, to=paste0(getwd(), "/", new_file))
-    return(readr::read_csv(new_file))
+    return(readxl::read_excel(new_file))
   }
 
     file.remove(tmp)
 }  # end interactive
   else {
-    warning("This function is only useful in interactive sessions running under Windows.")
+    warning("This function is only useful in interactive sessions.")
 }  # end not interactive
       invisible(NULL)
 # Function ends.

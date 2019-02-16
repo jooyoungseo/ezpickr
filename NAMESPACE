@@ -2,5 +2,6 @@
 
 export("%>%")
 export(pick)
+export(picko)
 export(view)
 importFrom(magrittr,"%>%")

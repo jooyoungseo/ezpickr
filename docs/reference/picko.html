@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Convenient function for viewing any rectangular data file in an Excel window. — view • ezpickr</title>
+<title>Choosing any rectangular Korean data file using interactive GUI dialog box. — picko • ezpickr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Convenient function for viewing any rectangular data file in an Excel window. — view" />
+<meta property="og:title" content="Choosing any rectangular Korean data file using interactive GUI dialog box. — picko" />
 
-<meta property="og:description" content="You can use this function for loading any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by DataViewer and has implemented write_xlsx instead of the default write.csv for a better performance." />
+<meta property="og:description" content="The basic functionality is exactly the same as pick, but optimized for Korean R users." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -114,55 +114,71 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Convenient function for viewing any rectangular data file in an Excel window.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jooyoungseo/ezpickr/blob/master/R/view.R'><code>R/view.R</code></a></small>
-    <div class="hidden name"><code>view.Rd</code></div>
+    <h1>Choosing any rectangular Korean data file using interactive GUI dialog box.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jooyoungseo/ezpickr/blob/master/R/picko.R'><code>R/picko.R</code></a></small>
+    <div class="hidden name"><code>picko.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>You can use this function for loading any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by <code><a href='https://www.rdocumentation.org/packages/BrailleR/topics/DataViewer'>DataViewer</a></code> and has implemented <code><a href='https://www.rdocumentation.org/packages/writexl/topics/write_xlsx'>write_xlsx</a></code> instead of the default <code><a href='https://www.rdocumentation.org/packages/utils/topics/write.table'>write.csv</a></code> for a better performance.</p>
+    <p>The basic functionality is exactly the same as <a href='pick.html'>pick</a>, but optimized for Korean R users.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>view</span>(<span class='no'>x</span>, <span class='kw'>mode</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>picko</span>(<span class='kw'>file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>An object of class data.frame, matrix, table or vector.</p></td>
-    </tr>
-    <tr>
-      <th>mode</th>
-      <td><p>Character value for session locale and encoding; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" while both change R locale into Korean (default is the current locale and encoding of your R session).</p></td>
+      <th>file</th>
+      <td><p>Either a path to a file, a connection, or literal data (either a single string or a raw vector). The default is NULL, which pops up an interactive GUI file choose dialogue box for users unless an explicit path/to/filename is given.
+Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Any additional arguments available for <a href='https://readr.tidyverse.org/reference/write_delim.html'>write_csv</a>.</p></td>
+      <td><p>Any additional arguments available for each file type and extension:
+<a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a> for CSV (Comma-Separated Values) files; <a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv2</a> for CSV2 (Semicolon-Separated Values) files; 
+<a href='https://readr.tidyverse.org/reference/read_delim.html'>read_tsv</a> for 'TSV' (Tab-Separated Values) files; <a href='https://readr.tidyverse.org/reference/read_file.html'>read_file</a> for 'txt' (plain text) files; 
+<a href='https://readxl.tidyverse.org/reference/read_excel.html'>read_excel</a> for 'Excel' files; <a href='https://haven.tidyverse.org/reference/read_spss.html'>read_spss</a> for 'SPSS' files; <a href='https://haven.tidyverse.org/reference/read_dta.html'>read_stata</a> for 'Stata' files; 
+<a href='https://haven.tidyverse.org/reference/read_sas.html'>read_sas</a> for 'SAS' files; <a href='https://www.rdocumentation.org/packages/textreadr/topics/read_document'>read_document</a> for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files; 
+<a href='https://www.rdocumentation.org/packages/jsonlite/topics/fromJSON'>fromJSON</a> for 'JSON' files; <a href='https://www.rdocumentation.org/packages/base/topics/readRDS'>readRDS</a> for 'RDS' files; <a href='https://www.rdocumentation.org/packages/base/topics/load'>load</a> for 'RDA' and 'RDATA' files.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Data object opened in a preferable spreadsheet application window.</p>
+    <p>tibble (table data.frame) object of the chosen rectangular data file will be returned.</p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>view</p>
+    <p>picko</p>
     <p>See example below.</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>[pick] for more details on basic functionality.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/interactive'>interactive</a></span>()) {
+    <pre class="examples"><div class='input'><span class='co'># Choosing file and saving it into a variable</span>
+<span class='co'>## Scenario 1: Picking up a file using interactive GUI dialog box:</span>
+<span class='kw'>if</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/interactive'>interactive</a></span>()) {
+  <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>ezpickr</span>)
+  <span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>picko</span>()
+}
+
+<span class='co'>## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below;</span>
+<span class='co'>## however, you can feed other files through this function</span>
+<span class='co'>## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,</span>
+<span class='co'>## *.html, webpage URL, *doc, *.docx, *.pdf, *.rtf, *.json, *.Rda, *.Rdata, and more):</span>
+<span class='kw'>if</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/interactive'>interactive</a></span>()) {
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>ezpickr</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='no'>airquality</span>)
-<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/str'>str</a></span>(<span class='no'>airquality</span>)
-<span class='co'>## View your data object in your spreadsheet software:</span>
-<span class='co'># Please use additional argument: either `mode="ko1"` or `mode="ko2"` for Korean dataset.</span>
-<span class='fu'>view</span>(<span class='no'>airquality</span>)
-<span class='co'># Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.</span>
+<span class='no'>test</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"airquality.sav"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"ezpickr"</span>)
+<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>picko</span>(<span class='no'>test</span>)
+
+<span class='co'># Now you can use the imported file as a tibble.</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/str'>str</a></span>(<span class='no'>data</span>)
 }</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -173,6 +189,8 @@
       <li><a href="#value">Value</a></li>
 
       <li><a href="#details">Details</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
