@@ -20,7 +20,7 @@
 #' See example below.
 
 #' @return tibble (table data.frame) object of the chosen rectangular data file will be returned.
-#' @seealso [pick] for more details on basic functionality.
+#' @seealso \link[ezpickr]{pick} for more details on basic functionality.
 #' @examples
 #' # Choosing file and saving it into a variable
 #' ## Scenario 1: Picking up a file using interactive GUI dialog box:

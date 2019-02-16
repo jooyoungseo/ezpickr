@@ -51,7 +51,7 @@ str(data)
 }
 }
 \seealso{
-[pick] for more details on basic functionality.
+\link[ezpickr]{pick} for more details on basic functionality.
 }
 \author{
 JooYoung Seo, \email{jooyoung@psu.edu}
