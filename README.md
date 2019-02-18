@@ -1,5 +1,5 @@
 
-# ezpickr: Convenient Package/Function for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and View Tidy Data in Preferable Spreadsheet
+# ezpickr: Convenient Package/Function for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and Seamlessly Manipulating Tidy Data between an Excel Window and R Session
 
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
@@ -20,7 +20,7 @@ into an R environment using GUI file-picker dialogue box (through
 `ezpickr::pick()`), and to provide R users with a convenient way to open
 and manipulate their data objects using Excel application for a seamless
 data communication between an Excel window and R session through
-`ezpickr::view()`).
+`ezpickr::viewxl()`).
 
 You can alternatively use `ezpickr::pick()` function for choosing *.csv,
 *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php,
@@ -78,16 +78,16 @@ library(ezpickr)
 
 # Choosing file and saving it into a variable
 ## Scenario 1: Picking up a file using interactive GUI dialog box:
-data <- pick() ## Use either `pick(mode="ko1")` or `pick(mode="ko2")` for Korean R users.
+data <- pick() ## Please use `picko()` instead if your path/file contains any Korean characters.
 
 ## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL containing table, *.json, *.Rda, *.Rdata, and more):
-data <- pick("test.sav") ## Use either `pick("test.sav", mode="ko1")` or `pick("test.sav", mode="ko2")` for Korean R users.
+data <- pick("test.sav") ## Please use `picko("test.sav")` instead if your path/file contains any Korean characters.
 
 # Now you can use the imported file as a tibble data frame.
 str(data)
 ```
 
-### Usage of the `view()` Function
+### Usage of the `viewxl()` Function
 
 You can open any data.frame, tibble, matrix, table or vector from an R
 session into your default-set spreadsheet application window as follows:
@@ -98,13 +98,13 @@ library(ezpickr)
 data(airquality)
 str(airquality)
 
-# Use `view()` function to open your data object in your spreadsheet:
-view(airquality)
+# Use `viewxl()` function to open your data object in your spreadsheet:
+viewxl(airquality)
 
 # Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.
 
-# You can pass a list object to the `view()` function like below:
+# You can pass a list object to the `viewxl()` function like below:
 l <- list(iris = iris, mtcars = mtcars, chickwts = chickwts, quakes = quakes)
-view(l)
+viewxl(l)
 # Then, each list item will appear in your Excel window sheet by sheet.
 ```

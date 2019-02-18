@@ -21,7 +21,7 @@
 #' See example below.
 
 #' @return tibble (table data.frame) object of the chosen rectangular data file will be returned.
-#' @seealso [picko] for more convenient use for Korean users.
+#' @seealso \link[ezpickr]{picko} for Korean users.
 #' @examples
 #' # Choosing file and saving it into a variable
 #' ## Scenario 1: Picking up a file using interactive GUI dialog box:

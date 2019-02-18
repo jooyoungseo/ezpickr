@@ -124,9 +124,11 @@
 <code>purrr</code> package has been added to the import package list to efficiently return multiple Excel sheets as a list of tibble; this way offers a better performance than the previous <code><a href="https://www.rdocumentation.org/packages/base/topics/lapply">lapply()</a></code> mechanism.</li>
 <li>Users can now access a multi-sheet Excel file with each sheet name as well as its index number when using <code><a href="../reference/pick.html">pick()</a></code> and <code><a href="../reference/picko.html">picko()</a></code> functions.</li>
 <li>
-<code><a href="../reference/view.html">view()</a></code> function now returns a tibble object reflecting users’ real-time manipulation done in Excel.</li>
+<code><a href="../reference/view.html">view()</a></code> function is now deprecated to avoid any collision with <code><a href="https://tibble.tidyverse.org/reference/view.html">tibble::view()</a></code> function which has the same name; users is recommended to use <code><a href="../reference/viewxl.html">viewxl()</a></code> function in the future instead.</li>
 <li>
-<code><a href="../reference/view.html">view()</a></code> function has been fixed to process multiple sheets as a list object.</li>
+<code><a href="../reference/view.html">view()</a></code> and <code><a href="../reference/viewxl.html">viewxl()</a></code> functions now return a tibble object reflecting users’ real-time manipulation done in Excel.</li>
+<li>
+<code><a href="../reference/view.html">view()</a></code> and <code><a href="../reference/viewxl.html">viewxl()</a></code> functions have been fixed to process multiple sheets as a list object.</li>
 </ul>
 </div>
     <div id="ezpickr-101" class="section level1">

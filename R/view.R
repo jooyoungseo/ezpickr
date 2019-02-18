@@ -2,9 +2,9 @@
 #' @title Seamlessly manipulate any rectangular data file between an Excel window and R session.
 
 #' @aliases view
-#' @keywords view
+#' @keywords internal
 
-#' @description You can use this function for real-time loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented \code{\link[writexl]{write_xlsx}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
+#' @description view function is deprecated to avoid any collision with \link[tibble]{view} function. Please use \link[ezpickr]{viewxl} instead.
 
 #' @export view
 #' @param x An object of class data.frame, matrix, table or vector.
@@ -13,8 +13,8 @@
 #' @details
 #' See example below.
 
-#' @return Data object opened in a preferable spreadsheet application window.
-
+#' @return Data object opened in a preferable spreadsheet application window which will in turn be called on your R session again.
+#' @seealso \link[ezpickr]{viewxl}.
 #' @examples
 #' if(interactive()) {
 #' library(ezpickr)
@@ -37,37 +37,8 @@
 # Function starts:
 view <- 
 function(x, ...) {
+    deprecate_message_once("view()", "viewxl()")
 
-      # only for interactive sessions
-  if (interactive()) {
-
-    if(is.matrix(x) || is.table(x)) {
-      x <- data.frame(x)
-    }
-
-    tmp <- tempfile(fileext = ".xlsx")
-    writexl::write_xlsx(x, tmp, ...)
-    utils::browseURL(tmp)
-
-    Sys.sleep(5)
-    file <- readline("Enter the file name you want to save as (press enter to skip): ")
-
-    if(file != "") {
-      if(!stringr::str_detect(file, "(.xlsx)$")) {
-        new_file <- paste0(file, ".xlsx")
-      } else {
-        new_file <- file
-      }
-
-      file.copy(from=tmp, to=paste0(getwd(), "/", new_file))
-    }
-
-    return(if(length(readxl::excel_sheets(path=tmp)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path=tmp)), readxl::read_excel, path=tmp)} else {readxl::read_excel(tmp)})
-    file.remove(tmp)
-}  # end interactive
-  else {
-    warning("This function is only useful in interactive sessions.")
-}  # end not interactive
-      invisible(NULL)
+    viewxl(x = x, ...)
 # Function ends.
 }

@@ -48,49 +48,11 @@
 picko <-
 function(file = NULL, ...) {   # Function starts:
 
-	if (is.null(file)) {
-		fullFile <- file.choose()
-	} else {
-		fullFile <- file
-	}
-
 	if(.Platform$OS.type == "windows") {
-		Sys.setlocale("LC_ALL", "Korean")
-		options(encoding="CP949")
-		fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
+		pick(file = file, mode = "ko1", ...)
 	} else {
-		Sys.setlocale("LC_ALL", "Korean")
-		options(encoding="UTF-8")
-		fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
+		pick(file = file, mode = "ko2", ...)
 	}
 
-	fileExt <- tools::file_ext(fullFile)
-
-	switch(fileExt, 
-		"csv" = readr::read_csv(file = fullFile, ...), 
-		"csv2" = readr::read_csv2(file = fullFile, ...), 
-		"tsv" = readr::read_tsv(file = fullFile, ...), 
-		"txt" = tibble::rowid_to_column(tibble::tibble(text = readr::read_file(fullFile, ...)), "paragraph"), 
-		"xlsx" = if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)}, 
-		"xls" = if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)}, 
-		"json" = tibble::tibble(jsonlite::fromJSON(fullFile, ...)), 
-		"rdata" = load(file = fullFile, ...), 
-		"rda" = tibble::tibble(load(file = fullFile, ...)), 
-		"rds" = tibble::tibble(readRDS(file = fullFile, ...)), 
-		"sav" = haven::read_sav(fullFile, ...), 
-		"sas7bdat" = haven::read_sas(fullFile, ...), 
-		"sas7bcat" = haven::read_sas(fullFile, ...), 
-		"por" = haven::read_por(fullFile, ...), 
-		"dta" = haven::read_dta(fullFile, ...), 
-		"html" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
-		"htm" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
-		"php" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
-		"pdf" = tibble::tibble(textreadr::read_pdf(fullFile, ...)), 
-		"rtf" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_rtf(fullFile, ...)), "paragraph"), 
-		"doc" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_doc(fullFile, ...)), "paragraph"), 
-		"docx" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_docx(fullFile, ...)), "paragraph"), 
-		stop("Sorry, but the file you have just chosen is not supported in this function. Report on this issue to the author (JooYoung Seo) at \n
-		https://github.com/jooyoungseo/ezpickr/issues. :)")
-	)
 }   # Function ends.
 

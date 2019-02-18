@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Seamlessly manipulate any rectangular data file between an Excel window and R session. — view • ezpickr</title>
+<title>Seamlessly manipulate any rectangular data file between an Excel window and R session. — viewxl • ezpickr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Seamlessly manipulate any rectangular data file between an Excel window and R session. — view" />
+<meta property="og:title" content="Seamlessly manipulate any rectangular data file between an Excel window and R session. — viewxl" />
 
-<meta property="og:description" content="view function is deprecated to avoid any collision with view function. Please use viewxl instead." />
+<meta property="og:description" content="You can use this function for loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel) in a real time. This function has been inspired by DataViewer and has implemented write_xlsx instead of the default write.csv for a better performance." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -115,17 +115,17 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Seamlessly manipulate any rectangular data file between an Excel window and R session.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jooyoungseo/ezpickr/blob/master/R/view.R'><code>R/view.R</code></a></small>
-    <div class="hidden name"><code>view.Rd</code></div>
+    <small class="dont-index">Source: <a href='https://github.com/jooyoungseo/ezpickr/blob/master/R/viewxl.R'><code>R/viewxl.R</code></a></small>
+    <div class="hidden name"><code>viewxl.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>view function is deprecated to avoid any collision with <a href='https://tibble.tidyverse.org/reference/view.html'>view</a> function. Please use <a href='viewxl.html'>viewxl</a> instead.</p>
+    <p>You can use this function for loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel) in a real time. This function has been inspired by <code><a href='https://www.rdocumentation.org/packages/BrailleR/topics/DataViewer'>DataViewer</a></code> and has implemented <code><a href='https://www.rdocumentation.org/packages/writexl/topics/write_xlsx'>write_xlsx</a></code> instead of the default <code><a href='https://www.rdocumentation.org/packages/utils/topics/write.table'>write.csv</a></code> for a better performance.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>view</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>viewxl</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -146,12 +146,8 @@
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>view</p>
+    <p>viewxl</p>
     <p>See example below.</p>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p><a href='viewxl.html'>viewxl</a>.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -160,12 +156,12 @@
 <span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/data'>data</a></span>(<span class='no'>airquality</span>)
 <span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/str'>str</a></span>(<span class='no'>airquality</span>)
 <span class='co'>## View your data object in your spreadsheet software:</span>
-<span class='fu'>view</span>(<span class='no'>airquality</span>)
+<span class='fu'>viewxl</span>(<span class='no'>airquality</span>)
 <span class='co'># Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.</span>
 
 <span class='co'># You can pass a list object to the `view()` function like below:</span>
 <span class='no'>l</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(<span class='kw'>iris</span> <span class='kw'>=</span> <span class='no'>iris</span>, <span class='kw'>mtcars</span> <span class='kw'>=</span> <span class='no'>mtcars</span>, <span class='kw'>chickwts</span> <span class='kw'>=</span> <span class='no'>chickwts</span>, <span class='kw'>quakes</span> <span class='kw'>=</span> <span class='no'>quakes</span>)
-<span class='fu'>view</span>(<span class='no'>l</span>)
+<span class='fu'>viewxl</span>(<span class='no'>l</span>)
 <span class='co'># Then, each list item will appear in your Excel window sheet by sheet.</span>
 }</div></pre>
   </div>
@@ -177,8 +173,6 @@
       <li><a href="#value">Value</a></li>
 
       <li><a href="#details">Details</a></li>
-
-      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

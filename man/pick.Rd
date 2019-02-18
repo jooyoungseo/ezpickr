@@ -53,7 +53,7 @@ data <- pick(test)
 str(data)
 }
 \seealso{
-[picko] for more convenient use for Korean users.
+\link[ezpickr]{picko} for Korean users.
 }
 \author{
 JooYoung Seo, \email{jooyoung@psu.edu}

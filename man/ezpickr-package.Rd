@@ -4,9 +4,9 @@
 \name{ezpickr-package}
 \alias{ezpickr}
 \alias{ezpickr-package}
-\title{ezpickr: Import Various Data File Types as a Rectangular Form Using a File Picker Dialogue Box}
+\title{ezpickr: Easy Data Import Using GUI File Picker and Seamless Communication between an Excel and R}
 \description{
-Easy data importing for the most frequently used file formats in a 'tibble' form.
+Choosing any rectangular data file using interactive GUI dialog box, and seamlessly manipulating tidy data between an 'Excel' window and R session.
 }
 \seealso{
 Useful links:

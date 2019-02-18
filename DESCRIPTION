@@ -1,5 +1,5 @@
 Package: ezpickr
-Title: Import Various Data File Types as a Rectangular Form Using a File Picker Dialogue Box
+Title: Easy Data Import Using GUI File Picker and Seamless Communication between an Excel and R
 Version: 1.0.1.9000
 Author: JooYoung Seo [aut, cre], Soyoung Choi [aut], hyun seung Lee [ctb], Jonghoen Kim [ctb]
 Maintainer: JooYoung Seo <jooyoung@psu.edu>
@@ -7,7 +7,7 @@ Authors@R: c(person("JooYoung", "Seo", role=c("aut", "cre"), email="jooyoung@psu
     person("Soyoung", "Choi", role = "aut", email = "sxc940@psu.edu"),
     person("hyun seung", "Lee", role = "ctb", email = "go4arsenal@gmail.com"),
     person("Jonghoen", "Kim", role = "ctb", email = "cysics@daum.net"))
-Description: Easy data importing for the most frequently used file formats in a 'tibble' form.
+Description: Choosing any rectangular data file using interactive GUI dialog box, and seamlessly manipulating tidy data between an 'Excel' window and R session.
 License: GPL-3
 VignetteBuilder: knitr
 URL: https://github.com/jooyoungseo/ezpickr
