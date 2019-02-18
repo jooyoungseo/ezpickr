@@ -23,7 +23,8 @@ Imports:
     textreadr,
     tibble,
     stringr,
-    writexl
+    writexl,
+    purrr
 RoxygenNote: 6.1.1.9000
 Suggests: 
     testthat,
