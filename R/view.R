@@ -60,9 +60,9 @@ function(x, ...) {
       }
 
       file.copy(from=tmp, to=paste0(getwd(), "/", new_file))
-    return(if(length(readxl::excel_sheets(path=new_file)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path=new_file)), readxl::read_excel, path=new_file)} else {readxl::read_excel(new_file)})
-  }
+    }
 
+    return(if(length(readxl::excel_sheets(path=tmp)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path=tmp)), readxl::read_excel, path=tmp)} else {readxl::read_excel(tmp)})
     file.remove(tmp)
 }  # end interactive
   else {
