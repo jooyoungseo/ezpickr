@@ -2,7 +2,7 @@
 % Please edit documentation in R/view.R
 \name{view}
 \alias{view}
-\title{Convenient function for viewing any rectangular data file in an Excel window.}
+\title{Seamlessly manipulate any rectangular data file between an Excel window and R session.}
 \usage{
 view(x, ...)
 }
@@ -15,7 +15,7 @@ view(x, ...)
 Data object opened in a preferable spreadsheet application window.
 }
 \description{
-You can use this function for loading any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented \code{\link[writexl]{write_xlsx}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
+You can use this function for real-time loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented \code{\link[writexl]{write_xlsx}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
 }
 \details{
 view

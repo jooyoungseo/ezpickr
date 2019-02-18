@@ -1,10 +1,10 @@
 #' view
-#' @title Convenient function for viewing any rectangular data file in an Excel window.
+#' @title Seamlessly manipulate any rectangular data file between an Excel window and R session.
 
 #' @aliases view
 #' @keywords view
 
-#' @description You can use this function for loading any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented \code{\link[writexl]{write_xlsx}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
+#' @description You can use this function for real-time loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel). This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented \code{\link[writexl]{write_xlsx}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
 
 #' @export view
 #' @param x An object of class data.frame, matrix, table or vector.

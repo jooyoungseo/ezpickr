@@ -17,9 +17,10 @@ coverage](https://codecov.io/gh/jooyoungseo/ezpickr/branch/master/graph/badge.sv
 The goal of ezpickr is to provide R beginners with a convenient way to
 pick up their data files and to easily import it as a tidy tibble form
 into an R environment using GUI file-picker dialogue box (through
-`ezpickr::pick()`), and to provide R users with convenient function to
-open their data objects with their preferable spreadsheet application
-window (e.g., Excel through `ezpickr::view()`).
+`ezpickr::pick()`), and to provide R users with a convenient way to open
+and manipulate their data objects using Excel application for a seamless
+data communication between an Excel window and R session through
+`ezpickr::view()`).
 
 You can alternatively use `ezpickr::pick()` function for choosing *.csv,
 *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php,
