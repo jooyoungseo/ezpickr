@@ -59,11 +59,15 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 		if(mode == "ko1") {
 			Sys.setlocale("LC_ALL", "Korean")
 			options(encoding="CP949")
-			fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
+			if(is.null(file)) {
+				fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
+			}
 		} else if(mode == "ko2") {
 			Sys.setlocale("LC_ALL", "Korean")
 			options(encoding="UTF-8")
-			fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
+			if(is.null(file)) {
+				fullFile <- iconv(fullFile, from="UTF-8", to="CP949")
+			}
 		}
 	}
 
