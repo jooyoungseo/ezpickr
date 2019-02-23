@@ -50,7 +50,7 @@ function(x, ...) {
     utils::browseURL(tmp)
 
     Sys.sleep(5)
-    file <- readline("Enter the file name you want to save as (press enter to skip): ")
+    file <- readline("Press **CTRL+S** in the open Excel file to pass any modified data content into this R session.\nEnter the file name you want to save as (press enter to skip): ")
 
     if(file != "") {
       if(!stringr::str_detect(file, "(.xlsx)$")) {
