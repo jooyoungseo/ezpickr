@@ -25,8 +25,8 @@ data communication between an Excel window and R session through
 You can alternatively use `ezpickr::pick()` function for choosing *.csv,
 *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php,
 *.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por,
-*.sas7bdat, *.sas7bcat, and *.dta files in an interactive GUI mode A
-file choose dialog box will be prompted.
+*.sas7bdat, *.sas7bcat, *.dta, and \*.mbox files in an interactive GUI
+mode A file choose dialog box will be prompted.
 
 Any additional arguments available for each file type and extension:
 `readr::read_csv()` for CSV (Comma-Separated Values) files;
@@ -37,8 +37,9 @@ Any additional arguments available for each file type and extension:
 ‘SPSS’ files; `haven::read_stata()` for ‘Stata’ files;
 `haven::read_sas()` for ‘SAS’ files; `textreadr::read_document()` for
 ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files;
-`jsonlite::fromJSON()` for ‘JSON’ files; `base::readRDS()` for ‘RDS’
-files; `base::load()` for ‘RDA’ and ‘RDATA’ files.
+`jsonlite::fromJSON()` for ‘JSON’ files; `mboxr::read_mbox()` for ‘mbox’
+files; `base::readRDS()` for ‘RDS’ files; `base::load()` for ‘RDA’ and
+‘RDATA’ files.
 
 Each corresponding function depending upon a file extension will be
 automatically matched and applied once you pick up your file using
@@ -80,7 +81,7 @@ library(ezpickr)
 ## Scenario 1: Picking up a file using interactive GUI dialog box:
 data <- pick() ## Please use `picko()` instead if your path/file contains any Korean characters.
 
-## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL containing table, *.json, *.Rda, *.Rdata, and more):
+## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL, *.json, *.Rda, *.Rdata, and more):
 data <- pick("test.sav") ## Please use `picko("test.sav")` instead if your path/file contains any Korean characters.
 
 # Now you can use the imported file as a tibble data frame.

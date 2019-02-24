@@ -1,3 +1,4 @@
+
 # ezpickr 1.0.1.9000
 
 * `purrr` package has been added to the import package list to efficiently return multiple Excel sheets as a list of tibble; this way offers a better performance than the previous `lapply()` mechanism.
@@ -6,6 +7,7 @@
 * `view()` function is now deprecated to avoid any collision with `tibble::view()` function which has the same name; users is recommended to use `viewxl()` function in the future instead.
 * `view()` and `viewxl()` functions now return a tibble object reflecting users' real-time manipulation done in Excel.
 * `view()` and `viewxl()` functions have been fixed to process multiple sheets as a list object.
+* `mbox` file format is now supported in both `pick()` and `picko()` functions using `mboxr::read_mbox()` function under the hood.
 
 
 # ezpickr 1.0.1
