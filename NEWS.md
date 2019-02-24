@@ -1,5 +1,5 @@
 
-# ezpickr 1.0.1.9000
+# ezpickr 1.0.2
 
 * `purrr` package has been added to the import package list to efficiently return multiple Excel sheets as a list of tibble; this way offers a better performance than the previous `lapply()` mechanism.
 * Users can now access a multi-sheet Excel file with each sheet name as well as its index number when using `pick()` and `picko()` functions.

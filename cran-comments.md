@@ -7,11 +7,12 @@
 
 0 errors | 0 warnings | 1 note
 
-# ezpickr 1.0.1
+# ezpickr 1.0.2
 
-* New function `picko()` has been added to assist Korean R users in importing Korean-included `path/to/file` as an alternative of `pick()` function; other non-Korean R users can still employ the existing `pick()` function.
-* A more robust mechanism has been applied to a file path that contains any Korean characters.
-* `pick()` and `picko()` functions now automatically return an Excel file that contains more than one sheet as a list of each Work Sheet (Thanks hyun seung Lee for the suggestion via email).
-* `view()` function now internally employs `writexl::write_xlsx()` function instead of `readr::write_csv()` to create Microsoft Excel file to provide users with a stable encoding consistency; since this change, `mode` option of the `view()` function has been removed.
-* `table` class is now supported in `view()` function by automatically converting it into data.frame class.
-* Startup message has been added to the package so that Korean R users can benefit from the newly developed `picko()` function when interacting with Korean-included dataset.
+* `purrr` package has been added to the import package list to efficiently return multiple Excel sheets as a list of tibble; this way offers a better performance than the previous `lapply()` mechanism.
+* Users can now access a multi-sheet Excel file with each sheet name as well as its index number when using `pick()` and `picko()` functions.
+* A bug that users cannot utilize explicit Korean path/file when `mode` option is specified in `pick()` function has been resolved; Korean users now can use explicit Korean-included path/file in `picko()` function as well.
+* `view()` function is now deprecated to avoid any collision with `tibble::view()` function which has the same name; users is recommended to use `viewxl()` function in the future instead.
+* `view()` and `viewxl()` functions now return a tibble object reflecting users' real-time manipulation done in Excel.
+* `view()` and `viewxl()` functions have been fixed to process multiple sheets as a list object.
+* `mbox` file format is now supported in both `pick()` and `picko()` functions using `mboxr::read_mbox()` function under the hood.

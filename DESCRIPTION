@@ -1,6 +1,6 @@
 Package: ezpickr
-Title: Easy Data Import Using GUI File Picker and Seamless Communication between an Excel and R
-Version: 1.0.1.9000
+Title: Easy Data Import Using GUI File Picker and Seamless Communication Between an Excel and R
+Version: 1.0.2
 Author: JooYoung Seo [aut, cre], Soyoung Choi [aut], hyun seung Lee [ctb], Jonghoen Kim [ctb]
 Maintainer: JooYoung Seo <jooyoung@psu.edu>
 Authors@R: c(person("JooYoung", "Seo", role=c("aut", "cre"), email="jooyoung@psu.edu"),
