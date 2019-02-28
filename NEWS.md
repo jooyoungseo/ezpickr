@@ -1,4 +1,9 @@
 
+# ezpickr 1.0.3
+
+* A critical bug that users cannot use the additional arguments of `readxl::read_excel()` for an Excel format within both `pick()` and `picko()` functions has been resolved; by default an Excel file with multiple sheets is returned as a list object when users have not passed any additional arguments.
+
+
 # ezpickr 1.0.2
 
 * `purrr` package has been added to the import package list to efficiently return multiple Excel sheets as a list of tibble; this way offers a better performance than the previous `lapply()` mechanism.
