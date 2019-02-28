@@ -49,6 +49,8 @@
 pick <-
 function(file = NULL, mode = NULL, ...) {   # Function starts:
 
+	elipsis <- list(...)
+
 	if(!is.null(mode)) {
 		if(mode == "ko1") {
 			Sys.setlocale("LC_ALL", "Korean")
@@ -78,8 +80,8 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 		"csv2" = readr::read_csv2(file = fullFile, ...), 
 		"tsv" = readr::read_tsv(file = fullFile, ...), 
 		"txt" = tibble::rowid_to_column(tibble::tibble(text = readr::read_file(fullFile, ...)), "paragraph"), 
-		"xlsx" = if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)}, 
-		"xls" = if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)}, 
+		"xlsx" = if(!length(elipsis)) { if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)} } else {readxl::read_excel(fullFile, ...)}, 
+		"xls" = if(!length(elipsis)) { if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)} } else {readxl::read_excel(fullFile, ...)}, 
 		"json" = tibble::tibble(jsonlite::fromJSON(fullFile, ...)), 
 		"rdata" = load(file = fullFile, ...), 
 		"rda" = tibble::tibble(load(file = fullFile, ...)), 
