@@ -23,7 +23,7 @@ Each corresponding function depending upon a file extension will be automaticall
 tibble (table data.frame) object of the chosen rectangular data file will be returned.
 }
 \description{
-You can alternatively use this function for choosing *.csv, *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php, *.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por, *.sas7bdat, *.sas7bcat, *.dta, and *.mbox files in an interactive GUI mode A file choose dialog box will be prompted.
+You can alternatively use this function for choosing *.csv, *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php, *.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por, *.sas7bdat, *.sas7bcat, *.dta, *.xpt, and *.mbox files in an interactive GUI mode A file choose dialog box will be prompted.
 }
 \details{
 pick

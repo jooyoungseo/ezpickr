@@ -4,7 +4,7 @@
 #' @aliases pick
 #' @keywords pick
 
-#' @description You can alternatively use this function for choosing *.csv, *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php, *.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por, *.sas7bdat, *.sas7bcat, *.dta, and *.mbox files in an interactive GUI mode A file choose dialog box will be prompted.
+#' @description You can alternatively use this function for choosing *.csv, *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php, *.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por, *.sas7bdat, *.sas7bcat, *.dta, *.xpt, and *.mbox files in an interactive GUI mode A file choose dialog box will be prompted.
 
 #' @export pick
 #' @param file Either a path to a file, a connection, or literal data (either a single string or a raw vector). The default is NULL, which pops up an interactive GUI file choose dialogue box for users unless an explicit path/to/filename is given.
@@ -91,6 +91,7 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 		"sas7bcat" = haven::read_sas(fullFile, ...), 
 		"por" = haven::read_por(fullFile, ...), 
 		"dta" = haven::read_dta(fullFile, ...), 
+		"xpt" = haven::read_xpt(fullFile, ...), 
 		"html" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
 		"htm" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 
 		"php" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_html(fullFile, ...)), "paragraph"), 

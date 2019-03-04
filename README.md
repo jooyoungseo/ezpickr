@@ -25,8 +25,8 @@ data communication between an Excel window and R session through
 You can alternatively use `ezpickr::pick()` function for choosing *.csv,
 *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php,
 *.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por,
-*.sas7bdat, *.sas7bcat, *.dta, and \*.mbox files in an interactive GUI
-mode A file choose dialog box will be prompted.
+*.sas7bdat, *.sas7bcat, *.dta, *.xpt, and *.mbox files in an interactive
+GUI mode A file choose dialog box will be prompted.
 
 Any additional arguments available for each file type and extension:
 `readr::read_csv()` for CSV (Comma-Separated Values) files;
