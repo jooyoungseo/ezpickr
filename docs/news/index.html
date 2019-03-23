@@ -16,7 +16,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -68,7 +69,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -95,7 +96,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jooyoungseo/ezpickr">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -121,11 +122,12 @@
 </h1>
 <ul>
 <li>“xpt” file format is now supported in <code><a href="../reference/pick.html">pick()</a></code> function.</li>
+<li>Atomic class (vector) is now supported in <code><a href="../reference/viewxl.html">viewxl()</a></code> function.</li>
 </ul>
 </div>
     <div id="ezpickr-103" class="section level1">
 <h1 class="page-header">
-<a href="#ezpickr-103" class="anchor"></a>ezpickr 1.0.3<small> Unreleased </small>
+<a href="#ezpickr-103" class="anchor"></a>ezpickr 1.0.3<small> 2019-02-28 </small>
 </h1>
 <ul>
 <li>A critical bug that users cannot use the additional arguments of <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code> for an Excel format within both <code><a href="../reference/pick.html">pick()</a></code> and <code><a href="../reference/picko.html">picko()</a></code> functions has been resolved; by default an Excel file with multiple sheets is returned as a list object when users have not passed any additional arguments.</li>

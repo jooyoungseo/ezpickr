@@ -41,7 +41,7 @@ function(x, ...) {
       # only for interactive sessions
   if (interactive()) {
 
-    if(is.matrix(x) || is.table(x)) {
+    if(is.matrix(x) || is.table(x) || is.atomic(x)) {
       x <- data.frame(x)
     }
 

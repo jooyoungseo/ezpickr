@@ -7,6 +7,8 @@
 
 0 errors | 0 warnings | 1 note
 
-# ezpickr 1.0.3
 
-* A critical and imperative bug that users cannot use the additional arguments of `readxl::read_excel()` for an Excel format within both `pick()` and `picko()` functions has been resolved; by default an Excel file with multiple sheets is returned as a list object when users have not passed any additional arguments.
+# ezpickr 1.0.4
+
+* "xpt" file format is now supported in `pick()` function.
+* Atomic class (vector) is now supported in `viewxl()` function.

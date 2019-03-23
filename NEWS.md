@@ -2,6 +2,7 @@
 # ezpickr 1.0.4
 
 * "xpt" file format is now supported in `pick()` function.
+* Atomic class (vector) is now supported in `viewxl()` function.
 
 
 # ezpickr 1.0.3

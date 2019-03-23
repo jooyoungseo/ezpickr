@@ -82,7 +82,7 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 		"txt" = tibble::rowid_to_column(tibble::tibble(text = readr::read_file(fullFile, ...)), "paragraph"), 
 		"xlsx" = if(!length(elipsis)) { if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)} } else {readxl::read_excel(fullFile, ...)}, 
 		"xls" = if(!length(elipsis)) { if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)} } else {readxl::read_excel(fullFile, ...)}, 
-		"json" = jsonlite::fromJSON(fullFile, ...), 
+		"json" = tibble::as_tibble(jsonlite::fromJSON(fullFile, ...)), 
 		"rdata" = load(file = fullFile, ...), 
 		"rda" = load(file = fullFile, ...), 
 		"rds" = readRDS(file = fullFile, ...), 
