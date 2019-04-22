@@ -5,6 +5,8 @@
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/ezpickr)](https://cran.r-project.org/package=ezpickr)
+[![Total
+Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ezpickr?color=orange)](https://cranlogs.r-pkg.org/badges/grand-total/ezpickr)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 [![Travis build

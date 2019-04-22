@@ -76,13 +76,13 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 	fileExt <- tolower(tools::file_ext(fullFile))
 
 	switch(fileExt, 
-		"csv" = readr::read_csv(file = fullFile, ...), 
-		"csv2" = readr::read_csv2(file = fullFile, ...), 
-		"tsv" = readr::read_tsv(file = fullFile, ...), 
+		"csv" = if("delim" %in% names(elipsis)) {readr::read_delim(file = fullFile, ...)} else {readr::read_csv(file = fullFile, ...)}, 
+		"csv2" = if("delim" %in% names(elipsis)) {readr::read_delim(file = fullFile, ...)} else {readr::read_csv2(file = fullFile, ...)}, 
+		"tsv" = if("delim" %in% names(elipsis)) {readr::read_delim(file = fullFile, ...)} else {readr::read_tsv(file = fullFile, ...)}, 
 		"txt" = tibble::rowid_to_column(tibble::tibble(text = readr::read_file(fullFile, ...)), "paragraph"), 
 		"xlsx" = if(!length(elipsis)) { if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)} } else {readxl::read_excel(fullFile, ...)}, 
 		"xls" = if(!length(elipsis)) { if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)} } else {readxl::read_excel(fullFile, ...)}, 
-		"json" = tibble::as_tibble(jsonlite::fromJSON(fullFile, ...)), 
+		"json" = tibble::tibble(jsonlite::fromJSON(fullFile, ...)), 
 		"rdata" = load(file = fullFile, ...), 
 		"rda" = load(file = fullFile, ...), 
 		"rds" = readRDS(file = fullFile, ...), 
