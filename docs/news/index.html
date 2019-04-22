@@ -61,7 +61,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ezpickr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.5</span>
       </span>
     </div>
 
@@ -116,9 +116,19 @@
       <small>Source: <a href='https://github.com/jooyoungseo/ezpickr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="ezpickr-105" class="section level1">
+<h1 class="page-header">
+<a href="#ezpickr-105" class="anchor"></a>ezpickr 1.0.5<small> Unreleased </small>
+</h1>
+<ul>
+<li>
+<code><a href="../reference/pick.html">pick()</a></code> and <code><a href="../reference/picko.html">picko()</a></code> functions now allow users to specify value-separator parameter using <code>delim</code> option for <code>*.csv</code>, <code>*.csv2</code>, and <code>*.tsv</code> files when the expected delimitters are not used. For example, in any event your csv file is separating each value using whitespace instead of comma(,) do the following:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">data &lt;-<span class="st"> </span><span class="kw"><a href="../reference/pick.html">pick</a></span>(<span class="dt">delim=</span><span class="st">" "</span>)</a></code></pre></div>
+</div>
     <div id="ezpickr-104" class="section level1">
 <h1 class="page-header">
-<a href="#ezpickr-104" class="anchor"></a>ezpickr 1.0.4<small> Unreleased </small>
+<a href="#ezpickr-104" class="anchor"></a>ezpickr 1.0.4<small> 2019-03-23 </small>
 </h1>
 <ul>
 <li>“xpt” file format is now supported in <code><a href="../reference/pick.html">pick()</a></code> function.</li>
@@ -223,6 +233,7 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#ezpickr-105">1.0.5</a></li>
         <li><a href="#ezpickr-104">1.0.4</a></li>
         <li><a href="#ezpickr-103">1.0.3</a></li>
         <li><a href="#ezpickr-102">1.0.2</a></li>
