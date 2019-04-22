@@ -1,4 +1,13 @@
 
+# ezpickr 1.0.5
+
+* `pick()` and `picko()` functions now allow users to specify value-separator parameter using `delim` option for `*.csv`, `*.csv2`, and `*.tsv` files when the expected delimitters are not used. For example, in any event your csv file is separating each value using whitespace instead of comma(,) do the following:
+
+``` r
+data <- pick(delim=" ")
+```
+
+
 # ezpickr 1.0.4
 
 * "xpt" file format is now supported in `pick()` function.

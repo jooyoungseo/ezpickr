@@ -23,8 +23,7 @@ Imports:
     stringr,
     writexl,
     purrr,
-    mboxr,
-    subtools (>= 0.1)
+    mboxr
 RoxygenNote: 6.1.1.9000
 Suggests: 
     testthat,
@@ -38,5 +37,3 @@ Suggests:
     docxtractr,
     antiword,
     covr
-Remotes: 
-    fkeck/subtools
