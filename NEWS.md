@@ -1,6 +1,5 @@
 # ezpickr 1.1.0
 
-
 * "*.Rmd" file format is now supported in `pick()` using `rmarkdown::render()` function.
 
 
