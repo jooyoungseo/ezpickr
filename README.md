@@ -17,18 +17,16 @@ status](https://ci.appveyor.com/api/projects/status/github/jooyoungseo/ezpickr?b
 coverage](https://codecov.io/gh/jooyoungseo/ezpickr/branch/master/graph/badge.svg)](https://codecov.io/gh/jooyoungseo/ezpickr?branch=master)
 
 The goal of ezpickr is to provide R beginners with a convenient way to
-pick up their data files and to easily import it as a tidy tibble form
-into an R environment using GUI file-picker dialogue box (through
-`ezpickr::pick()`), and to provide R users with a convenient way to open
-and manipulate their data objects using Excel application for a seamless
-data communication between an Excel window and R session through
-`ezpickr::viewxl()`).
+pick up their data files in a tidy tibble form into an R environment
+using GUI file-picker dialogue box (`ezpickr::pick()`), and to open and
+manipulate their data objects using Excel application for a seamless
+data communication between an Excel and R session (`ezpickr::viewxl()`).
 
 You can alternatively use `ezpickr::pick()` function for choosing *.csv,
 *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php,
 *.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por,
-*.sas7bdat, *.sas7bcat, *.dta, *.xpt, and *.mbox files in an interactive
-GUI mode A file choose dialog box will be prompted.
+*.sas7bdat, *.sas7bcat, *.dta, *.xpt, *.mbox, and \*.Rmd files in an
+interactive GUI mode A file choose dialog box will be prompted.
 
 Any additional arguments available for each file type and extension:
 `readr::read_csv()` for CSV (Comma-Separated Values) files;
@@ -40,8 +38,8 @@ Any additional arguments available for each file type and extension:
 `haven::read_sas()` for ‘SAS’ files; `textreadr::read_document()` for
 ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files;
 `jsonlite::fromJSON()` for ‘JSON’ files; `mboxr::read_mbox()` for ‘mbox’
-files; `base::readRDS()` for ‘RDS’ files; `base::load()` for ‘RDA’ and
-‘RDATA’ files.
+files; `rmarkdown::render()` for ‘Rmd’ files; `base::readRDS()` for
+‘RDS’ files; `base::load()` for ‘RDA’ and ‘RDATA’ files.
 
 Each corresponding function depending upon a file extension will be
 automatically matched and applied once you pick up your file using
@@ -54,11 +52,11 @@ either the GUI-file-chooser dialog box or explicit path/to/filename.
 You can install the latest development version as follows:
 
 ``` r
-if(!require(devtools)) {
-install.packages("devtools")
+if(!require(remotes)) {
+install.packages("remotes")
 }
 
-devtools::install_github('jooyoungseo/ezpickr')
+remotes::install_github('jooyoungseo/ezpickr')
 ```
 
 ### Stable Version

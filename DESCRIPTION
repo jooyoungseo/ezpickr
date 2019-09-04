@@ -6,7 +6,7 @@ Authors@R: c(person("JooYoung", "Seo", role=c("aut", "cre"), email="jooyoung@psu
     person("hyun seung", "Lee", role = "ctb", email = "go4arsenal@gmail.com"),
     person("Jonghoen", "Kim", role = "ctb", email = "cysics@daum.net"))
 Description: Choosing any rectangular data file using interactive GUI dialog box, and seamlessly manipulating tidy data between an 'Excel' window and R session.
-License: GPL-3
+License: GPL-3 + file LICENSE
 VignetteBuilder: knitr
 URL: https://github.com/jooyoungseo/ezpickr
 BugReports: https://github.com/jooyoungseo/ezpickr/issues
@@ -23,12 +23,14 @@ Imports:
     stringr,
     writexl,
     purrr,
-    mboxr
+    mboxr,
+    vroom,
+    rmarkdown,
+    utils
 RoxygenNote: 6.1.1.9000
 Suggests: 
     testthat,
     knitr,
-    rmarkdown,
     striprtf,
     xml2,
     tesseract,
