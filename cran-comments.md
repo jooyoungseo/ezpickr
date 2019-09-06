@@ -9,4 +9,5 @@
 
 # ezpickr 1.1.0
 
+* Unnecessary LICENSE file for GPL3 has been removed.
 * "*.Rmd" file format is now supported in `pick()` using `rmarkdown::render()` function.
