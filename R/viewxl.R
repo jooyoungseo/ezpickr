@@ -4,10 +4,10 @@
 #' @aliases viewxl
 #' @keywords viewxl
 
-#' @description You can use this function for loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector objects into your system-default spreadsheet software (e.g., Excel) in a real time. This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented \code{\link[writexl]{write_xlsx}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
+#' @description You can use this function for loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector, or DocumentTermMatrix objects into your system-default spreadsheet software (e.g., Excel) in a real time. This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented \code{\link[writexl]{write_xlsx}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
 
 #' @export viewxl
-#' @param x An object of class data.frame, matrix, table or vector.
+#' @param x An object of class data.frame, matrix, table, vector, or DocumentTermMatrix.
 #' @param ... Any additional arguments available for \link[writexl]{write_xlsx}.
 
 #' @details
@@ -43,7 +43,17 @@ function(x, ...) {
 
     if(is.matrix(x) || is.table(x) || is.atomic(x)) {
       x <- data.frame(x)
-    }
+    } else if(class(x)[1] == "DocumentTermMatrix") {
+      m <- as.matrix(x)
+      df <- data.frame(m, row.names = rownames(m))
+      colnames(df) <- colnames(m)
+      x <- tibble::rownames_to_column(df, "Document/Term")
+    } else if(class(x)[1] == "TermDocumentMatrix") {
+      m <- as.matrix(x)
+      df <- data.frame(m, row.names = rownames(m))
+      colnames(df) <- colnames(m)
+      x <- tibble::rownames_to_column(df, "Term/Document")
+}
 
     tmp <- tempfile(fileext = ".xlsx")
     writexl::write_xlsx(x, tmp, ...)
