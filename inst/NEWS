@@ -1,3 +1,8 @@
+# ezpickr 1.2.0
+
+* `DocumentTermMatrix` and `TermDocumentMatrix` class are now supported in `viewxl()` function.
+
+
 # ezpickr 1.1.0
 
 * "*.Rmd" file format is now supported in `pick()` using `rmarkdown::render()` function.
