@@ -1,3 +1,5 @@
+# ezpickr 1.2.0
+
 * `DocumentTermMatrix` and `TermDocumentMatrix` class are now supported in `viewxl()` function.
 
 
