@@ -1,4 +1,4 @@
-citHeader("To cite mboxr in publications use:")
+citHeader("To cite ezpickr in publications use:")
 
 year = version$year
 vers = paste('R package version', meta$Version)
@@ -9,6 +9,6 @@ citEntry(
   author   = Filter(function(p) 'aut' %in% p$role, as.person(meta$Author)),
   year     = year,
   note = vers,
-  url      = meta$URL,
+  url      = "https://CRAN.R-project.org/package=ezpickr",
   textVersion = paste('JooYoung Seo & Soyoung Choi (', year, '). ezpickr: ', meta$Title, '. ', vers, '.', sep = '')
 )
