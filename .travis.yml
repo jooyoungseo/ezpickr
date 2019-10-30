@@ -1,10 +1,11 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
-
 language: R
 sudo: required
 cache: packages
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install -y libpoppler-cpp-dev libtesseract-dev libleptonica-dev tesseract-ocr-eng
+- sudo apt-get update
+- sudo apt-get install -y libpoppler-cpp-dev libtesseract-dev libleptonica-dev tesseract-ocr-eng
 after_success:
-  - Rscript -e 'covr::codecov()'
+- Rscript -e 'covr::codecov()'
+env:
+  matrix:
+    secure: xUzFsOBhIOHw0x6WO/HL1idLB+RVINNo04t2lZiPskb1+gqheit3mfklKh+Mhnb+/uu4py9qGolmPwZ8CF8p47xrtbzlnmIAzgxiN4KxNZACapg5NQhdLQyF9ssANfVKyqfaQyU3N/DlvOSgsbElNJ4cH1JLdGr5mnoHllZFRSuEDJYZqKl5tiEUV7fATWyKjENIVYJBWN62vMSQQvHHlLhgERGQDRy4UkeWr0fskK3Huey4UR3MWQ+6XM8SF4fT3fOohvihpg7z0VTM0q9AaHDiGqKJXQNEfIiOKebOturs+aVSpi4l4jzSf74x0MuTsXhBtdeXBjn1W6X0c6r+BU0uRhpudu4GPg4e6lCxF711ye+mSbmx370diFYc+BpChz6lMqYt2ID89rc470ExTU+LCiBqqzB8pj++ZUXUWR5fnsuPiHsS8gtuBtl+s0AIpy68zyGIOHFZ5IO3jv24LmFFKmzpiG56ODXoHZRq5mDcLtL9oqbesOQPIyAQIBNFT99qdWNqpYF7aD8ptf1oy5xdNXaxBo1hk4oHeTh7F2zEtN6O5dL0VeYv9SMcx1gNrMV6O4qq/E1whBmkUopMsflA1xfwA61Y29XYhLc1iBRxOQfTNSG3ngHtNcjbcg0S3s4TMvRFX0OZy34cQ2RNW6vfk0dOUdKAn+eU2npIAJ8=
