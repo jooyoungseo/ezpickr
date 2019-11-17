@@ -3,6 +3,5 @@
 export("%>%")
 export(pick)
 export(picko)
-export(view)
 export(viewxl)
 importFrom(magrittr,"%>%")

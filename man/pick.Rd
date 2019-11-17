@@ -13,11 +13,11 @@ Each corresponding function depending upon a file extension will be automaticall
 \item{mode}{Character value for session locale and encoding; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" while both change R locale into Korean (default is the current locale and encoding of your R session).}
 
 \item{...}{Any additional arguments available for each file type and extension:
-\link[readr]{read_csv} for CSV (Comma-Separated Values) files; \link[readr]{read_csv2} for CSV2 (Semicolon-Separated Values) files; 
-\link[readr]{read_tsv} for 'TSV' (Tab-Separated Values) files; \link[readr]{read_file} for 'txt' (plain text) files; 
+\link[vroom]{vroom} for 'CSV' (Comma-Separated Values); 'CSV2' (Semicolon-Separated Values); 
+'TSV' (Tab-Separated Values); 'txt' (plain text) files; 
 \link[readxl]{read_excel} for 'Excel' files; \link[haven]{read_spss} for 'SPSS' files; \link[haven]{read_stata} for 'Stata' files; 
 \link[haven]{read_sas} for 'SAS' files; \link[textreadr]{read_document} for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files; 
-\link[jsonlite]{fromJSON} for 'JSON' files; \link[mboxr]{read_mbox} for 'mbox' files; \link[rmarkdown]{render} for 'Rmd' files; \link[base]{readRDS} for 'RDS' files; \link[base]{load} for 'RDA' and 'RDATA' files.}
+\link[jsonlite]{fromJSON} for 'JSON' files; \link[mboxr]{read_mbox} for 'mbox' files; \link[rmarkdown]{render} for 'Rmd' files; \link[base]{source} for 'R' files; \link[base]{readRDS} for 'RDS' files; \link[base]{load} for 'RDA' and 'RDATA' files.}
 }
 \value{
 tibble (table data.frame) object of the chosen rectangular data file will be returned.

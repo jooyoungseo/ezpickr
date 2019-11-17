@@ -2,6 +2,8 @@
 
 * `readr` has been replaced with `vroom` package for a better performance.
 * Supported "*.R" file in `pick()` function.
+* Package startup message has been removed.
+* `view()` function, which has been deprecated, has been removed (please use `viewxl()` moving forward).
 
 
 # ezpickr 1.2.0

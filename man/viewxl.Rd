@@ -15,7 +15,7 @@ viewxl(x, ...)
 Data object opened in a preferable spreadsheet application window which will in turn be called on your R session again.
 }
 \description{
-You can use this function for loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector, or DocumentTermMatrix objects into your system-default spreadsheet software (e.g., Excel) in a real time. This function has been inspired by \code{\link[BrailleR]{DataViewer}} and has implemented \code{\link[writexl]{write_xlsx}} instead of the default \code{\link[utils]{write.csv}} for a better performance.
+You can use this function for loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector, or DocumentTermMatrix objects into your system-default spreadsheet software (e.g., Excel) in a real time. This function has employed \code{\link[writexl]{write_xlsx}} under the hood.
 }
 \details{
 viewxl
