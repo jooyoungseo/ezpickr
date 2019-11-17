@@ -29,17 +29,16 @@ You can alternatively use `ezpickr::pick()` function for choosing *.csv,
 interactive GUI mode A file choose dialog box will be prompted.
 
 Any additional arguments available for each file type and extension:
-`readr::read_csv()` for CSV (Comma-Separated Values) files;
-`readr::read_csv2()` for CSV2 (Semicolon-Separated Values) files;
-`readr::read_tsv()` for ‘TSV’ (Tab-Separated Values) files;
-`readr::read_file()` for ‘txt’ (plain text) files;
-`readxl::read_excel()` for ‘Excel’ files; `haven::read_spss()` for
-‘SPSS’ files; `haven::read_stata()` for ‘Stata’ files;
-`haven::read_sas()` for ‘SAS’ files; `textreadr::read_document()` for
-‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files;
+`vroom::vroom()` for ‘CSV’ (Comma-Separated Values); ‘CSV2’
+(Semicolon-Separated Values); ‘TSV’ (Tab-Separated Values)‘txt’ (plain
+text) files; `readxl::read_excel()` for ‘Excel’ files;
+`haven::read_spss()` for ‘SPSS’ files; `haven::read_stata()` for ‘Stata’
+files; `haven::read_sas()` for ‘SAS’ files; `textreadr::read_document()`
+for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files;
 `jsonlite::fromJSON()` for ‘JSON’ files; `mboxr::read_mbox()` for ‘mbox’
-files; `rmarkdown::render()` for ‘Rmd’ files; `base::readRDS()` for
-‘RDS’ files; `base::load()` for ‘RDA’ and ‘RDATA’ files.
+files; `rmarkdown::render()` for ‘Rmd’ files; `base::source()` for ‘R’
+files; `base::readRDS()` for ‘RDS’ files; `base::load()` for ‘RDA’ and
+‘RDATA’ files.
 
 Each corresponding function depending upon a file extension will be
 automatically matched and applied once you pick up your file using

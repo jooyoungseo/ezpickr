@@ -10,11 +10,11 @@
 #' @param file Either a path to a file, a connection, or literal data (either a single string or a raw vector). The default is NULL, which pops up an interactive GUI file choose dialogue box for users unless an explicit path/to/filename is given.
 #' Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.
 #' @param ... Any additional arguments available for each file type and extension:
-#' \link[readr]{read_csv} for CSV (Comma-Separated Values) files; \link[readr]{read_csv2} for CSV2 (Semicolon-Separated Values) files; 
-#' \link[readr]{read_tsv} for 'TSV' (Tab-Separated Values) files; \link[readr]{read_file} for 'txt' (plain text) files; 
+#' \link[vroom]{vroom} for 'CSV' (Comma-Separated Values); 'CSV2' (Semicolon-Separated Values); 
+#' 'TSV' (Tab-Separated Values); 'txt' (plain text) files; 
 #' \link[readxl]{read_excel} for 'Excel' files; \link[haven]{read_spss} for 'SPSS' files; \link[haven]{read_stata} for 'Stata' files; 
 #' \link[haven]{read_sas} for 'SAS' files; \link[textreadr]{read_document} for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files; 
-#' \link[jsonlite]{fromJSON} for 'JSON' files; \link[mboxr]{read_mbox} for 'mbox' files; \link[base]{readRDS} for 'RDS' files; \link[base]{load} for 'RDA' and 'RDATA' files.
+#' \link[jsonlite]{fromJSON} for 'JSON' files; \link[mboxr]{read_mbox} for 'mbox' files; \link[rmarkdown]{render} for 'Rmd' files; \link[base]{source} for 'R' files; \link[base]{readRDS} for 'RDS' files; \link[base]{load} for 'RDA' and 'RDATA' files.
 
 #' @details
 #' See example below.

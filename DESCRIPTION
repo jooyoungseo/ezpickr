@@ -13,7 +13,6 @@ BugReports: https://github.com/jooyoungseo/ezpickr/issues
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    readr,
     haven,
     jsonlite,
     readxl,
@@ -27,15 +26,13 @@ Imports:
     vroom,
     rmarkdown,
     utils
-RoxygenNote: 6.1.99.9001
+RoxygenNote: 7.0.0.9000
 Suggests: 
     testthat,
     knitr,
     striprtf,
     xml2,
-    tesseract,
     dplyr,
     rvest,
-    docxtractr,
     antiword,
     covr

@@ -11,11 +11,11 @@
 #' Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.
 #' @param mode Character value for session locale and encoding; available values are: "ko1" for "CP949"; "ko2" for "UTF-8" while both change R locale into Korean (default is the current locale and encoding of your R session).
 #' @param ... Any additional arguments available for each file type and extension:
-#' \link[readr]{read_csv} for CSV (Comma-Separated Values) files; \link[readr]{read_csv2} for CSV2 (Semicolon-Separated Values) files; 
-#' \link[readr]{read_tsv} for 'TSV' (Tab-Separated Values) files; \link[readr]{read_file} for 'txt' (plain text) files; 
+#' \link[vroom]{vroom} for 'CSV' (Comma-Separated Values); 'CSV2' (Semicolon-Separated Values); 
+#' 'TSV' (Tab-Separated Values); 'txt' (plain text) files; 
 #' \link[readxl]{read_excel} for 'Excel' files; \link[haven]{read_spss} for 'SPSS' files; \link[haven]{read_stata} for 'Stata' files; 
 #' \link[haven]{read_sas} for 'SAS' files; \link[textreadr]{read_document} for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files; 
-#' \link[jsonlite]{fromJSON} for 'JSON' files; \link[mboxr]{read_mbox} for 'mbox' files; \link[rmarkdown]{render} for 'Rmd' files; \link[base]{readRDS} for 'RDS' files; \link[base]{load} for 'RDA' and 'RDATA' files.
+#' \link[jsonlite]{fromJSON} for 'JSON' files; \link[mboxr]{read_mbox} for 'mbox' files; \link[rmarkdown]{render} for 'Rmd' files; \link[base]{source} for 'R' files; \link[base]{readRDS} for 'RDS' files; \link[base]{load} for 'RDA' and 'RDATA' files.
 
 #' @details
 #' See example below.
@@ -75,14 +75,18 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 
 	fileExt <- tolower(tools::file_ext(fullFile))
 
+if(fileExt %in% c("csv", "csv2", "tsv", "txt")) {
+vroom::vroom(file = fullFile, ...)
+} else {
 	switch(fileExt, 
-		"csv" = if("delim" %in% names(elipsis)) {readr::read_delim(file = fullFile, ...)} else {readr::read_csv(file = fullFile, ...)}, 
-		"csv2" = if("delim" %in% names(elipsis)) {readr::read_delim(file = fullFile, ...)} else {readr::read_csv2(file = fullFile, ...)}, 
-		"tsv" = if("delim" %in% names(elipsis)) {readr::read_delim(file = fullFile, ...)} else {readr::read_tsv(file = fullFile, ...)}, 
-		"txt" = tibble::rowid_to_column(tibble::tibble(text = readr::read_file(fullFile, ...)), "paragraph"), 
+#		"csv" = if("delim" %in% names(elipsis)) {vroom::vroom(file = fullFile, ...)} else {vroom::vroom(file = fullFile, ...)}, 
+#		"csv2" = if("delim" %in% names(elipsis)) {readr::read_delim(file = fullFile, ...)} else {readr::read_csv2(file = fullFile, ...)}, 
+#		"tsv" = if("delim" %in% names(elipsis)) {readr::read_delim(file = fullFile, ...)} else {readr::read_tsv(file = fullFile, ...)}, 
+#		"txt" = tibble::rowid_to_column(tibble::tibble(text = readr::read_file(fullFile, ...)), "paragraph"), 
 		"xlsx" = if(!length(elipsis)) { if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)} } else {readxl::read_excel(fullFile, ...)}, 
 		"xls" = if(!length(elipsis)) { if(length(readxl::excel_sheets(path=fullFile)) > 1) {purrr::map(purrr::set_names(readxl::excel_sheets(path = fullFile)), readxl::read_excel, path = fullFile, ...)} else {readxl::read_excel(fullFile, ...)} } else {readxl::read_excel(fullFile, ...)}, 
 		"json" = tibble::tibble(jsonlite::fromJSON(fullFile, ...)), 
+		"r" = base::source(file = fullFile, ...), 
 		"rdata" = load(file = fullFile, ...), 
 		"rda" = load(file = fullFile, ...), 
 		"rds" = readRDS(file = fullFile, ...), 
@@ -104,5 +108,7 @@ function(file = NULL, mode = NULL, ...) {   # Function starts:
 		stop("Sorry, but the file you have just chosen is not supported in this function. Report on this issue to the author (JooYoung Seo) at \n
 		https://github.com/jooyoungseo/ezpickr/issues. :)")
 	)
+}
+
 }   # Function ends.
 
