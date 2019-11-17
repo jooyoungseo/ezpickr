@@ -1,3 +1,5 @@
+# ezpickr 2.0.0
+
 * `readr` has been replaced with `vroom` package for a better performance.
 * Supported "*.R" file in `pick()` function.
 
