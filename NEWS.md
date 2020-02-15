@@ -1,3 +1,9 @@
+# ezpickr (development version)
+
+
+* Experimentally supported subtitle files (e.g., "*.srt"; "*.vtt"; "*.sub"; "*.ass") in `pick()` function using `subtools` GitHub package.
+
+
 # ezpickr 2.0.0
 
 * `readr` has been replaced with `vroom` package for a better performance.

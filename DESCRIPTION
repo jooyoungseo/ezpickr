@@ -1,6 +1,6 @@
 Package: ezpickr
 Title: Easy Data Import Using GUI File Picker and Seamless Communication Between an Excel and R
-Version: 2.0.0
+Version: 2.0.0.9000
 Authors@R: c(person("JooYoung", "Seo", role=c("aut", "cre"), email="jooyoung@psu.edu", comment = c(ORCID = "0000-0002-4064-6012")),
     person("Soyoung", "Choi", role = "aut", email = "sxc940@psu.edu", comment = c(ORCID = "0000-0002-0998-3352")),
     person("hyun seung", "Lee", role = "ctb", email = "go4arsenal@gmail.com"),
@@ -25,7 +25,8 @@ Imports:
     mboxr,
     vroom,
     rmarkdown,
-    utils
+    utils,
+    subtools (>= 1.0)
 RoxygenNote: 7.0.0.9000
 Suggests: 
     testthat,
@@ -36,3 +37,5 @@ Suggests:
     rvest,
     antiword,
     covr
+Remotes: 
+    fkeck/subtools
