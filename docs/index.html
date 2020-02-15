@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">ezpickr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0.9000</span>
       </span>
     </div>
 
@@ -87,7 +87,7 @@
 
 <p>The goal of ezpickr is to provide R beginners with a convenient way to pick up their data files in a tidy tibble form into an R environment using GUI file-picker dialogue box (<code><a href="reference/pick.html">ezpickr::pick()</a></code>), and to open and manipulate their data objects using Excel application for a seamless data communication between an Excel and R session (<code><a href="reference/viewxl.html">ezpickr::viewxl()</a></code>).</p>
 <p>You can alternatively use <code><a href="reference/pick.html">ezpickr::pick()</a></code> function for choosing <em>.csv, </em>.csv2, <em>.tsv, </em>.txt, <em>.xls, </em>.xlsx, <em>.json, </em>.html, <em>.htm, </em>.php, <em>.pdf, </em>.doc, <em>.docx, </em>.rtf, <em>.RData, </em>.Rda, <em>.RDS, </em>.sav (SPSS), <em>.por, </em>.sas7bdat, <em>.sas7bcat, </em>.dta, <em>.xpt, </em>.mbox, and *.Rmd files in an interactive GUI mode A file choose dialog box will be prompted.</p>
-<p>Any additional arguments available for each file type and extension: <code><a href="https://rdrr.io/pkg/vroom/man/vroom.html">vroom::vroom()</a></code> for ‘CSV’ (Comma-Separated Values); ‘CSV2’ (Semicolon-Separated Values); ‘TSV’ (Tab-Separated Values)‘txt’ (plain text) files; <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="https://haven.tidyverse.org/reference/read_spss.html">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="https://haven.tidyverse.org/reference/read_dta.html">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="https://haven.tidyverse.org/reference/read_sas.html">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="https://rdrr.io/pkg/textreadr/man/read_document.html">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="https://rdrr.io/pkg/jsonlite/man/fromJSON.html">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="https://rdrr.io/pkg/mboxr/man/read_mbox.html">mboxr::read_mbox()</a></code> for ‘mbox’ files; <code><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">rmarkdown::render()</a></code> for ‘Rmd’ files; <code><a href="https://rdrr.io/r/base/source.html">base::source()</a></code> for ‘R’ files; <code><a href="https://rdrr.io/r/base/readRDS.html">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="https://rdrr.io/r/base/load.html">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
+<p>Any additional arguments available for each file type and extension: <code><a href="https://rdrr.io/pkg/vroom/man/vroom.html">vroom::vroom()</a></code> for ‘CSV’ (Comma-Separated Values); ‘CSV2’ (Semicolon-Separated Values); ‘TSV’ (Tab-Separated Values)‘txt’ (plain text) files; <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="https://haven.tidyverse.org/reference/read_spss.html">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="https://haven.tidyverse.org/reference/read_dta.html">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="https://haven.tidyverse.org/reference/read_sas.html">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="https://rdrr.io/pkg/textreadr/man/read_document.html">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="https://jeroen.cran.dev/jsonlite/reference/fromJSON.html">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="https://rdrr.io/pkg/mboxr/man/read_mbox.html">mboxr::read_mbox()</a></code> for ‘mbox’ files; <code><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">rmarkdown::render()</a></code> for ‘Rmd’ files; <code><a href="https://rdrr.io/r/base/source.html">base::source()</a></code> for ‘R’ files; <code><a href="https://rdrr.io/r/base/readRDS.html">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="https://rdrr.io/r/base/load.html">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
 <p>Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -151,7 +151,7 @@
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
@@ -184,19 +184,7 @@
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="http://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License: GPL v3"></a></li>
-<li><a href="https://cran.r-project.org/package=ezpickr"><img src="https://www.r-pkg.org/badges/version/ezpickr" alt="CRAN status"></a></li>
-<li><a href="https://cranlogs.r-pkg.org/badges/grand-total/ezpickr"><img src="https://cranlogs.r-pkg.org/badges/grand-total/ezpickr?color=orange" alt="Total Downloads"></a></li>
-<li><a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
-<li><a href="https://travis-ci.org/jooyoungseo/ezpickr"><img src="https://travis-ci.org/jooyoungseo/ezpickr.svg?branch=master" alt="Travis build status"></a></li>
-<li><a href="https://ci.appveyor.com/project/jooyoungseo/ezpickr"><img src="https://ci.appveyor.com/api/projects/status/github/jooyoungseo/ezpickr?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
-<li><a href="https://codecov.io/gh/jooyoungseo/ezpickr?branch=master"><img src="https://codecov.io/gh/jooyoungseo/ezpickr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
-</ul>
-</div>
-</div>
+  </div>
 </div>
 
 

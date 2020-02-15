@@ -1,6 +1,6 @@
-pandoc: 2.7.3
+pandoc: 2.9.1.1
 pkgdown: 1.4.1.9000
-pkgdown_sha: d0b233e7966dc86c2b315f880deead3c7f9a5a02
+pkgdown_sha: a78e04c8516894904c16da95c62f78907df29f36
 articles:
   ezpickr_vignette: ezpickr_vignette.html
 
