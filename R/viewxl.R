@@ -56,6 +56,7 @@ function(x, ...) {
 }
 
     tmp <- tempfile(fileext = ".xlsx")
+    x <- suppressWarnings(tidyr::unnest(x))
     writexl::write_xlsx(x, tmp, ...)
     utils::browseURL(tmp)
 

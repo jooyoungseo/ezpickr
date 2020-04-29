@@ -26,8 +26,9 @@ Imports:
     vroom,
     rmarkdown,
     utils,
-    subtools (>= 1.0)
-RoxygenNote: 7.0.2
+    subtools (>= 1.0),
+    tidyr
+RoxygenNote: 7.1.0
 Suggests: 
     testthat,
     knitr,
