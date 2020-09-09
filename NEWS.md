@@ -1,4 +1,4 @@
-# ezpickr (development version)
+# ezpickr 2.1.0
 
 * Experimentally supported subtitle files (e.g., "*.srt"; "*.vtt"; "*.sub"; "*.ass") in `pick()` function using `subtools` GitHub package.
 * Nested data.frame objects alike are unnested in `viewxl()` function.
