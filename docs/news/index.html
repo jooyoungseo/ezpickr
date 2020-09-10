@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ezpickr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1.0</span>
       </span>
     </div>
 
@@ -126,9 +126,9 @@
       <small>Source: <a href='https://github.com/jooyoungseo/ezpickr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="ezpickr-development-version" class="section level1">
-<h1 class="page-header" data-toc-text="development version">
-<a href="#ezpickr-development-version" class="anchor"></a>ezpickr (development version)<small> Unreleased </small>
+    <div id="ezpickr-210" class="section level1">
+<h1 class="page-header" data-toc-text="2.1.0">
+<a href="#ezpickr-210" class="anchor"></a>ezpickr 2.1.0<small> Unreleased </small>
 </h1>
 <ul>
 <li>Experimentally supported subtitle files (e.g., “<em>.srt"; "</em>.vtt”; “<em>.sub"; "</em>.ass”) in <code><a href="../reference/pick.html">pick()</a></code> function using <code>subtools</code> GitHub package.</li>
@@ -174,7 +174,9 @@
 <li>
 <code><a href="../reference/pick.html">pick()</a></code> and <code><a href="../reference/picko.html">picko()</a></code> functions now allow users to specify value-separator parameter using <code>delim</code> option for <code>*.csv</code>, <code>*.csv2</code>, and <code>*.tsv</code> files when the expected delimitters are not used. For example, in any event your csv file is separating each value using whitespace instead of comma(,) do the following:</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="no">data</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/pick.html">pick</a></span>(<span class="kw">delim</span><span class="kw">=</span><span class="st">" "</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="kw">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pick.html">pick</a></span>(delim=<span class="st">" "</span>)
+</pre></div>
 </div>
     <div id="ezpickr-104" class="section level1">
 <h1 class="page-header" data-toc-text="1.0.4">
@@ -294,7 +296,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.9000.</p>
 </div>
 
       </footer>

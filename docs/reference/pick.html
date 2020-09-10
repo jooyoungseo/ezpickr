@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ezpickr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1.0</span>
       </span>
     </div>
 
@@ -132,7 +132,7 @@
     <p>You can alternatively use this function for choosing *.csv, *.csv2, *.tsv, *.txt, *.xls, *.xlsx, *.json, *.html, *.htm, *.php, *.pdf, *.doc, *.docx, *.rtf, *.RData, *.Rda, *.RDS, *.sav (SPSS), *.por, *.sas7bdat, *.sas7bcat, *.dta, *.xpt, *.mbox, and *.Rmd files in an interactive GUI mode A file choose dialog box will be prompted.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>pick</span>(<span class='kw'>file</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>mode</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>pick</span>(file = <span class='kw'>NULL</span>, mode = <span class='kw'>NULL</span>, <span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -149,10 +149,10 @@ Each corresponding function depending upon a file extension will be automaticall
     <tr>
       <th>...</th>
       <td><p>Any additional arguments available for each file type and extension:
-<a href='https://rdrr.io/pkg/vroom/man/vroom.html'>vroom</a> for 'CSV' (Comma-Separated Values); 'CSV2' (Semicolon-Separated Values); 
-'TSV' (Tab-Separated Values); 'txt' (plain text) files; 
-<a href='https://readxl.tidyverse.org/reference/read_excel.html'>read_excel</a> for 'Excel' files; <a href='https://haven.tidyverse.org/reference/read_spss.html'>read_spss</a> for 'SPSS' files; <a href='https://haven.tidyverse.org/reference/read_dta.html'>read_stata</a> for 'Stata' files; 
-<a href='https://haven.tidyverse.org/reference/read_sas.html'>read_sas</a> for 'SAS' files; <a href='https://rdrr.io/pkg/textreadr/man/read_document.html'>read_document</a> for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files; 
+<a href='https://vroom.r-lib.org/reference/vroom.html'>vroom</a> for 'CSV' (Comma-Separated Values); 'CSV2' (Semicolon-Separated Values);
+'TSV' (Tab-Separated Values); 'txt' (plain text) files;
+<a href='https://readxl.tidyverse.org/reference/read_excel.html'>read_excel</a> for 'Excel' files; <a href='https://haven.tidyverse.org/reference/read_spss.html'>read_spss</a> for 'SPSS' files; <a href='https://haven.tidyverse.org/reference/read_dta.html'>read_stata</a> for 'Stata' files;
+<a href='https://haven.tidyverse.org/reference/read_sas.html'>read_sas</a> for 'SAS' files; <a href='https://rdrr.io/pkg/textreadr/man/read_document.html'>read_document</a> for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files;
 <a href='https://jeroen.cran.dev/jsonlite/reference/fromJSON.html'>fromJSON</a> for 'JSON' files; <a href='https://rdrr.io/pkg/mboxr/man/read_mbox.html'>read_mbox</a> for 'mbox' files; <a href='https://rdrr.io/pkg/rmarkdown/man/render.html'>render</a> for 'Rmd' files; <a href='https://rdrr.io/r/base/source.html'>source</a> for 'R' files; <a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a> for 'RDS' files; <a href='https://rdrr.io/r/base/load.html'>load</a> for 'RDA' and 'RDATA' files.</p></td>
     </tr>
     </table>
@@ -168,27 +168,32 @@ Each corresponding function depending upon a file extension will be automaticall
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><a href='picko.html'>picko</a> for Korean users.</p></div>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>JooYoung Seo, <a href='mailto:jooyoung@psu.edu'>jooyoung@psu.edu</a></p>
+<p>Soyoung Choi, <a href='mailto:sxc940@psu.edu'>sxc940@psu.edu</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Choosing file and saving it into a variable</span>
 <span class='co'>## Scenario 1: Picking up a file using interactive GUI dialog box:</span>
-<span class='kw'>if</span>(<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>ezpickr</span>)
-<span class='co'>## Use either `pick(mode="ko1")` or `pick(mode="ko2")` for Korean R users.</span>
-  <span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>pick</span>()
+<span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/jooyoungseo/ezpickr'>ezpickr</a></span>)
+  <span class='co'>## Use either `pick(mode="ko1")` or `pick(mode="ko2")` for Korean R users.</span>
+  <span class='kw'>data</span> <span class='op'>&lt;-</span> <span class='fu'>pick</span>()
 }
 
 <span class='co'>## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below;</span>
 <span class='co'>## however, you can feed other files through this function</span>
 <span class='co'>## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,</span>
 <span class='co'>## *.html, webpage URL, *doc, *.docx, *.pdf, *.rtf, *.json, *.Rda, *.Rdata, and more):</span>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>ezpickr</span>)
-<span class='no'>test</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"airquality.sav"</span>, <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>"ezpickr"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/jooyoungseo/ezpickr'>ezpickr</a></span>)
+<span class='kw'>test</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='st'>"extdata"</span>, <span class='st'>"airquality.sav"</span>, package = <span class='st'>"ezpickr"</span>)
 <span class='co'>## Use either `pick(test, mode="ko1")` or `pick(test, mode="ko2")` for Korean R users.</span>
-<span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>pick</span>(<span class='no'>test</span>)
+<span class='kw'>data</span> <span class='op'>&lt;-</span> <span class='fu'>pick</span>(<span class='kw'>test</span>)
 
 <span class='co'># Now you can use the imported file as a tibble.</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='no'>data</span>)</div><div class='output co'>#&gt; tibble [153 x 6] (S3: tbl_df/tbl/data.frame)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>data</span>)
+</div><div class='output co'>#&gt; tibble [153 x 6] (S3: tbl_df/tbl/data.frame)
 #&gt;  $ Ozone  : num [1:153] 41 36 12 18 NA 28 23 19 8 NA ...
 #&gt;   ..- attr(*, "format.spss")= chr "F8.0"
 #&gt;  $ Solar.R: num [1:153] 190 118 149 313 NA NA 299 99 19 194 ...
@@ -216,7 +221,7 @@ Each corresponding function depending upon a file extension will be automaticall
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.9000.</p>
 </div>
 
       </footer>

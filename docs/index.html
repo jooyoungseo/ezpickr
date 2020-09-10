@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">ezpickr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1.0</span>
       </span>
     </div>
 
@@ -87,7 +87,7 @@
 
 <p>The goal of ezpickr is to provide R beginners with a convenient way to pick up their data files in a tidy tibble form into an R environment using GUI file-picker dialogue box (<code><a href="reference/pick.html">ezpickr::pick()</a></code>), and to open and manipulate their data objects using Excel application for a seamless data communication between an Excel and R session (<code><a href="reference/viewxl.html">ezpickr::viewxl()</a></code>).</p>
 <p>You can alternatively use <code><a href="reference/pick.html">ezpickr::pick()</a></code> function for choosing <em>.csv, </em>.csv2, <em>.tsv, </em>.txt, <em>.xls, </em>.xlsx, <em>.json, </em>.html, <em>.htm, </em>.php, <em>.pdf, </em>.doc, <em>.docx, </em>.rtf, <em>.RData, </em>.Rda, <em>.RDS, </em>.sav (SPSS), <em>.por, </em>.sas7bdat, <em>.sas7bcat, </em>.dta, <em>.xpt, </em>.mbox, and *.Rmd files in an interactive GUI mode A file choose dialog box will be prompted.</p>
-<p>Any additional arguments available for each file type and extension: <code><a href="https://rdrr.io/pkg/vroom/man/vroom.html">vroom::vroom()</a></code> for ‘CSV’ (Comma-Separated Values); ‘CSV2’ (Semicolon-Separated Values); ‘TSV’ (Tab-Separated Values)‘txt’ (plain text) files; <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="https://haven.tidyverse.org/reference/read_spss.html">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="https://haven.tidyverse.org/reference/read_dta.html">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="https://haven.tidyverse.org/reference/read_sas.html">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="https://rdrr.io/pkg/textreadr/man/read_document.html">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="https://jeroen.cran.dev/jsonlite/reference/fromJSON.html">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="https://rdrr.io/pkg/mboxr/man/read_mbox.html">mboxr::read_mbox()</a></code> for ‘mbox’ files; <code><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">rmarkdown::render()</a></code> for ‘Rmd’ files; <code><a href="https://rdrr.io/r/base/source.html">base::source()</a></code> for ‘R’ files; <code><a href="https://rdrr.io/r/base/readRDS.html">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="https://rdrr.io/r/base/load.html">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
+<p>Any additional arguments available for each file type and extension: <code><a href="https://vroom.r-lib.org/reference/vroom.html">vroom::vroom()</a></code> for ‘CSV’ (Comma-Separated Values); ‘CSV2’ (Semicolon-Separated Values); ‘TSV’ (Tab-Separated Values)‘txt’ (plain text) files; <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="https://haven.tidyverse.org/reference/read_spss.html">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="https://haven.tidyverse.org/reference/read_dta.html">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="https://haven.tidyverse.org/reference/read_sas.html">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="https://rdrr.io/pkg/textreadr/man/read_document.html">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="https://jeroen.cran.dev/jsonlite/reference/fromJSON.html">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="https://rdrr.io/pkg/mboxr/man/read_mbox.html">mboxr::read_mbox()</a></code> for ‘mbox’ files; <code><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">rmarkdown::render()</a></code> for ‘Rmd’ files; <code><a href="https://rdrr.io/r/base/source.html">base::source()</a></code> for ‘R’ files; <code><a href="https://rdrr.io/r/base/readRDS.html">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="https://rdrr.io/r/base/load.html">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
 <p>Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -96,17 +96,21 @@
 <h3 class="hasAnchor">
 <a href="#development-version" class="anchor"></a>Development Version</h3>
 <p>You can install the latest development version as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="kw">if</span>(!<span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="no">remotes</span>)) {
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="co">if</span>(<span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="kw"><a href="https://remotes.r-lib.org">remotes</a></span>)) {
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)
 }
 
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">'jooyoungseo/ezpickr'</span>)</pre></div>
+<span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">'jooyoungseo/ezpickr'</span>)
+</pre></div>
 </div>
 <div id="stable-version" class="section level3">
 <h3 class="hasAnchor">
 <a href="#stable-version" class="anchor"></a>Stable Version</h3>
 <p>You can install the released version of ezpickr from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"ezpickr"</span>)</pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"ezpickr"</span>)
+</pre></div>
 </div>
 </div>
 <div id="example" class="section level2">
@@ -116,36 +120,40 @@
 <h3 class="hasAnchor">
 <a href="#usage-of-the-pick-function" class="anchor"></a>Usage of the <code>pick()</code> Function</h3>
 <p>This is a basic example which shows you how to import data files:</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ezpickr</span>)
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/jooyoungseo/ezpickr">ezpickr</a></span>)
 
 <span class="co"># Choosing file and saving it into a variable</span>
 <span class="co">## Scenario 1: Picking up a file using interactive GUI dialog box:</span>
-<span class="no">data</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/pick.html">pick</a></span>() <span class="co">## Please use `picko()` instead if your path/file contains any Korean characters.</span>
+<span class="kw">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/pick.html">pick</a></span>() <span class="co">## Please use `picko()` instead if your path/file contains any Korean characters.</span>
 
 <span class="co">## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL, *.json, *.Rda, *.Rdata, and more):</span>
-<span class="no">data</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/pick.html">pick</a></span>(<span class="st">"test.sav"</span>) <span class="co">## Please use `picko("test.sav")` instead if your path/file contains any Korean characters.</span>
+<span class="kw">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/pick.html">pick</a></span>(<span class="st">"test.sav"</span>) <span class="co">## Please use `picko("test.sav")` instead if your path/file contains any Korean characters.</span>
 
 <span class="co"># Now you can use the imported file as a tibble data frame.</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="no">data</span>)</pre></div>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="kw">data</span>)
+</pre></div>
 </div>
 <div id="usage-of-the-viewxl-function" class="section level3">
 <h3 class="hasAnchor">
 <a href="#usage-of-the-viewxl-function" class="anchor"></a>Usage of the <code>viewxl()</code> Function</h3>
 <p>You can open any data.frame, tibble, matrix, table or vector from an R session into your default-set spreadsheet application window as follows:</p>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ezpickr</span>)
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/jooyoungseo/ezpickr">ezpickr</a></span>)
 
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="no">airquality</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="no">airquality</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="kw">airquality</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="kw">airquality</span>)
 
 <span class="co"># Use `viewxl()` function to open your data object in your spreadsheet:</span>
-<span class="fu"><a href="reference/viewxl.html">viewxl</a></span>(<span class="no">airquality</span>)
+<span class="fu"><a href="reference/viewxl.html">viewxl</a></span>(<span class="kw">airquality</span>)
 
 <span class="co"># Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.</span>
 
 <span class="co"># You can pass a list object to the `viewxl()` function like below:</span>
-<span class="no">l</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="kw">iris</span> <span class="kw">=</span> <span class="no">iris</span>, <span class="kw">mtcars</span> <span class="kw">=</span> <span class="no">mtcars</span>, <span class="kw">chickwts</span> <span class="kw">=</span> <span class="no">chickwts</span>, <span class="kw">quakes</span> <span class="kw">=</span> <span class="no">quakes</span>)
-<span class="fu"><a href="reference/viewxl.html">viewxl</a></span>(<span class="no">l</span>)
-<span class="co"># Then, each list item will appear in your Excel window sheet by sheet.</span></pre></div>
+<span class="kw">l</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(iris = <span class="kw">iris</span>, mtcars = <span class="kw">mtcars</span>, chickwts = <span class="kw">chickwts</span>, quakes = <span class="kw">quakes</span>)
+<span class="fu"><a href="reference/viewxl.html">viewxl</a></span>(<span class="kw">l</span>)
+<span class="co"># Then, each list item will appear in your Excel window sheet by sheet.</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -205,7 +213,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.9000.</p>
 </div>
 
       </footer>

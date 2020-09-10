@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ezpickr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1.0</span>
       </span>
     </div>
 
@@ -132,7 +132,7 @@
     <p>You can use this function for loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector, or DocumentTermMatrix objects into your system-default spreadsheet software (e.g., Excel) in a real time. This function has employed <code><a href='https://docs.ropensci.org/writexl/reference/write_xlsx.html'>write_xlsx</a></code> under the hood.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>viewxl</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>viewxl</span>(<span class='kw'>x</span>, <span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -155,21 +155,28 @@
     <p>viewxl</p>
 
 <p>See example below.</p>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>JooYoung Seo, <a href='mailto:jooyoung@psu.edu'>jooyoung@psu.edu</a></p>
+<p>Soyoung Choi, <a href='mailto:sxc940@psu.edu'>sxc940@psu.edu</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span>(<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>ezpickr</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>airquality</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='no'>airquality</span>)
-<span class='co'>## View your data object in your spreadsheet software:</span>
-<span class='fu'>viewxl</span>(<span class='no'>airquality</span>)
-<span class='co'># Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.</span>
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/jooyoungseo/ezpickr'>ezpickr</a></span>)
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>airquality</span>)
+  <span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>airquality</span>)
 
-<span class='co'># You can pass a list object to the `view()` function like below:</span>
-<span class='no'>l</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>iris</span> <span class='kw'>=</span> <span class='no'>iris</span>, <span class='kw'>mtcars</span> <span class='kw'>=</span> <span class='no'>mtcars</span>, <span class='kw'>chickwts</span> <span class='kw'>=</span> <span class='no'>chickwts</span>, <span class='kw'>quakes</span> <span class='kw'>=</span> <span class='no'>quakes</span>)
-<span class='fu'>viewxl</span>(<span class='no'>l</span>)
-<span class='co'># Then, each list item will appear in your Excel window sheet by sheet.</span>
-}</div></pre>
+  <span class='co'>## View your data object in your spreadsheet software:</span>
+  <span class='fu'>viewxl</span>(<span class='kw'>airquality</span>)
+  <span class='co'># Then, when necessary, you can modify the opened data </span>
+  <span class='co'># in the spreadsheet and save it as a new data.</span>
+
+  <span class='co'># You can pass a list object to the `view()` function like below:</span>
+  <span class='kw'>l</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(iris = <span class='kw'>iris</span>, mtcars = <span class='kw'>mtcars</span>, chickwts = <span class='kw'>chickwts</span>, quakes = <span class='kw'>quakes</span>)
+  <span class='fu'>viewxl</span>(<span class='kw'>l</span>)
+  <span class='co'># Then, each list item will appear in your Excel window sheet by sheet.</span>
+}
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -185,7 +192,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.9000.</p>
 </div>
 
       </footer>

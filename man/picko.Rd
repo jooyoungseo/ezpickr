@@ -11,10 +11,10 @@ picko(file = NULL, ...)
 Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.}
 
 \item{...}{Any additional arguments available for each file type and extension:
-\link[vroom]{vroom} for 'CSV' (Comma-Separated Values); 'CSV2' (Semicolon-Separated Values); 
-'TSV' (Tab-Separated Values); 'txt' (plain text) files; 
-\link[readxl]{read_excel} for 'Excel' files; \link[haven]{read_spss} for 'SPSS' files; \link[haven]{read_stata} for 'Stata' files; 
-\link[haven]{read_sas} for 'SAS' files; \link[textreadr]{read_document} for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files; 
+\link[vroom]{vroom} for 'CSV' (Comma-Separated Values); 'CSV2' (Semicolon-Separated Values);
+'TSV' (Tab-Separated Values); 'txt' (plain text) files;
+\link[readxl]{read_excel} for 'Excel' files; \link[haven]{read_spss} for 'SPSS' files; \link[haven]{read_stata} for 'Stata' files;
+\link[haven]{read_sas} for 'SAS' files; \link[textreadr]{read_document} for 'Microsoft Word', 'PDF', 'RTF', 'HTML', 'HTM', and 'PHP' files;
 \link[jsonlite]{fromJSON} for 'JSON' files; \link[mboxr]{read_mbox} for 'mbox' files; \link[rmarkdown]{render} for 'Rmd' files; \link[base]{source} for 'R' files; \link[base]{readRDS} for 'RDS' files; \link[base]{load} for 'RDA' and 'RDATA' files.}
 }
 \value{
@@ -32,7 +32,7 @@ See example below.
 \examples{
 # Choosing file and saving it into a variable
 ## Scenario 1: Picking up a file using interactive GUI dialog box:
-if(interactive()) {
+if (interactive()) {
   library(ezpickr)
   data <- picko()
 }
@@ -41,13 +41,13 @@ if(interactive()) {
 ## however, you can feed other files through this function
 ## such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt,
 ## *.html, webpage URL, *doc, *.docx, *.pdf, *.rtf, *.json, *.Rda, *.Rdata, and more):
-if(interactive()) {
-library(ezpickr)
-test <- system.file("extdata", "airquality.sav", package = "ezpickr")
-data <- picko(test)
+if (interactive()) {
+  library(ezpickr)
+  test <- system.file("extdata", "airquality.sav", package = "ezpickr")
+  data <- picko(test)
 
-# Now you can use the imported file as a tibble.
-str(data)
+  # Now you can use the imported file as a tibble.
+  str(data)
 }
 }
 \seealso{

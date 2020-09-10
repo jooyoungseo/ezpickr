@@ -24,18 +24,20 @@ viewxl
 See example below.
 }
 \examples{
-if(interactive()) {
-library(ezpickr)
-data(airquality)
-str(airquality)
-## View your data object in your spreadsheet software:
-viewxl(airquality)
-# Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.
+if (interactive()) {
+  library(ezpickr)
+  data(airquality)
+  str(airquality)
 
-# You can pass a list object to the `view()` function like below:
-l <- list(iris = iris, mtcars = mtcars, chickwts = chickwts, quakes = quakes)
-viewxl(l)
-# Then, each list item will appear in your Excel window sheet by sheet.
+  ## View your data object in your spreadsheet software:
+  viewxl(airquality)
+  # Then, when necessary, you can modify the opened data 
+  # in the spreadsheet and save it as a new data.
+
+  # You can pass a list object to the `view()` function like below:
+  l <- list(iris = iris, mtcars = mtcars, chickwts = chickwts, quakes = quakes)
+  viewxl(l)
+  # Then, each list item will appear in your Excel window sheet by sheet.
 }
 }
 \author{
