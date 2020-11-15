@@ -1,5 +1,5 @@
 
-# ezpickr: Convenient Package/Function for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and Seamlessly Manipulating Tidy Data between an Excel Window and R Session
+# 1 ezpickr: Convenient Package for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and Seamlessly Manipulating Tidy Data between an Excel Window and R Session
 
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
@@ -44,67 +44,59 @@ Each corresponding function depending upon a file extension will be
 automatically matched and applied once you pick up your file using
 either the GUI-file-chooser dialog box or explicit path/to/filename.
 
-## Installation
+## 1.1 Installation
 
-### Development Version
+### 1.1.1 Development Version
 
 You can install the latest development version as follows:
 
-``` r
-if(!require(remotes)) {
-install.packages("remotes")
-}
+    if(!require(remotes)) {
+    install.packages("remotes")
+    }
 
-remotes::install_github('jooyoungseo/ezpickr')
-```
+    remotes::install_github('jooyoungseo/ezpickr')
 
-### Stable Version
+### 1.1.2 Stable Version
 
 You can install the released version of ezpickr from
 [CRAN](https://CRAN.R-project.org) with:
 
-``` r
-install.packages("ezpickr")
-```
+    install.packages("ezpickr")
 
-## Example
+## 1.2 Example
 
-### Usage of the `pick()` Function
+### 1.2.1 Usage of the `pick()` Function
 
 This is a basic example which shows you how to import data files:
 
-``` r
-library(ezpickr)
+    library(ezpickr)
 
-# Choosing file and saving it into a variable
-## Scenario 1: Picking up a file using interactive GUI dialog box:
-data <- pick() ## Please use `picko()` instead if your path/file contains any Korean characters.
+    # Choosing file and saving it into a variable
+    ## Scenario 1: Picking up a file using interactive GUI dialog box:
+    data <- pick() ## Please use `picko()` instead if your path/file contains any Korean characters.
 
-## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL, *.json, *.Rda, *.Rdata, and more):
-data <- pick("test.sav") ## Please use `picko("test.sav")` instead if your path/file contains any Korean characters.
+    ## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL, *.json, *.Rda, *.Rdata, and more):
+    data <- pick("test.sav") ## Please use `picko("test.sav")` instead if your path/file contains any Korean characters.
 
-# Now you can use the imported file as a tibble data frame.
-str(data)
-```
+    # Now you can use the imported file as a tibble data frame.
+    str(data)
 
-### Usage of the `viewxl()` Function
+### 1.2.2 Usage of the `viewxl()` Function
 
 You can open any data.frame, tibble, matrix, table or vector from an R
 session into your default-set spreadsheet application window as follows:
 
-``` r
-library(ezpickr)
+    library(ezpickr)
 
-data(airquality)
-str(airquality)
+    data(airquality)
+    str(airquality)
 
-# Use `viewxl()` function to open your data object in your spreadsheet:
-viewxl(airquality)
+    # Use `viewxl()` function to open your data object in your spreadsheet:
+    viewxl(airquality)
 
-# Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.
+    # Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.
 
-# You can pass a list object to the `viewxl()` function like below:
-l <- list(iris = iris, mtcars = mtcars, chickwts = chickwts, quakes = quakes)
-viewxl(l)
-# Then, each list item will appear in your Excel window sheet by sheet.
-```
+    # You can pass a list object to the `viewxl()` function like below:
+    l <- list(iris = iris, mtcars = mtcars, chickwts = chickwts, quakes = quakes)
+    viewxl(l)
+    # Then, each list item will appear in your Excel window sheet by sheet.
