@@ -4,7 +4,7 @@
 \name{ezpickr-package}
 \alias{ezpickr}
 \alias{ezpickr-package}
-\title{ezpickr: Easy Data Import Using GUI File Picker and Seamless Communication Between an Excel and R}
+\title{ezpickr: Easy Data Import Using GUI File Picker}
 \description{
 Choosing any rectangular data file using interactive GUI dialog box, and seamlessly manipulating tidy data between an 'Excel' window and R session.
 }

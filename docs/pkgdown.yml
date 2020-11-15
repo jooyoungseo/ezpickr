@@ -1,6 +1,7 @@
 pandoc: 2.10.1
-pkgdown: 1.6.0.9000
-pkgdown_sha: f3d5e4141b7893df4f0a122983f89a440d187625
-articles: []
-last_built: 2020-09-09T18:15Z
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  ezpickr_vignette: ezpickr_vignette.html
+last_built: 2020-11-15T15:07Z
 

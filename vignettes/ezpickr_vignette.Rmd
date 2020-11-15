@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# ezpickr: Convenient Package/Function for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and Seamlessly Manipulating Tidy Data between an Excel Window and R Session
+# ezpickr: Convenient Package for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and Seamlessly Manipulating Tidy Data between an Excel Window and R Session
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![CRAN status](https://www.r-pkg.org/badges/version/ezpickr)](https://cran.r-project.org/package=ezpickr)

@@ -132,7 +132,7 @@
     <p>You can use this function for loading and manipulating any data.frame, data_frame, tbl_df, matrix, table, vector, or DocumentTermMatrix objects into your system-default spreadsheet software (e.g., Excel) in a real time. This function has employed <code><a href='https://docs.ropensci.org/writexl/reference/write_xlsx.html'>write_xlsx</a></code> under the hood.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>viewxl</span>(<span class='kw'>x</span>, <span class='kw'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>viewxl</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -161,21 +161,21 @@
 <p>Soyoung Choi, <a href='mailto:sxc940@psu.edu'>sxc940@psu.edu</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) {
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/jooyoungseo/ezpickr'>ezpickr</a></span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='kw'>airquality</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>airquality</span>)
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/jooyoungseo/ezpickr'>ezpickr</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>airquality</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>airquality</span><span class='op'>)</span>
 
   <span class='co'>## View your data object in your spreadsheet software:</span>
-  <span class='fu'>viewxl</span>(<span class='kw'>airquality</span>)
+  <span class='fu'>viewxl</span><span class='op'>(</span><span class='va'>airquality</span><span class='op'>)</span>
   <span class='co'># Then, when necessary, you can modify the opened data </span>
   <span class='co'># in the spreadsheet and save it as a new data.</span>
 
   <span class='co'># You can pass a list object to the `view()` function like below:</span>
-  <span class='kw'>l</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(iris = <span class='kw'>iris</span>, mtcars = <span class='kw'>mtcars</span>, chickwts = <span class='kw'>chickwts</span>, quakes = <span class='kw'>quakes</span>)
-  <span class='fu'>viewxl</span>(<span class='kw'>l</span>)
+  <span class='va'>l</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>iris <span class='op'>=</span> <span class='va'>iris</span>, mtcars <span class='op'>=</span> <span class='va'>mtcars</span>, chickwts <span class='op'>=</span> <span class='va'>chickwts</span>, quakes <span class='op'>=</span> <span class='va'>quakes</span><span class='op'>)</span>
+  <span class='fu'>viewxl</span><span class='op'>(</span><span class='va'>l</span><span class='op'>)</span>
   <span class='co'># Then, each list item will appear in your Excel window sheet by sheet.</span>
-}
+<span class='op'>}</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -192,7 +192,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
