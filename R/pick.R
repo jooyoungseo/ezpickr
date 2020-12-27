@@ -120,10 +120,10 @@ pick <-
         "docx" = tibble::rowid_to_column(tibble::tibble(text = textreadr::read_docx(fullFile, ...)), "paragraph"),
         "mbox" = mboxr::read_mbox(fullFile, ...),
         "rmd" = lapply(rmarkdown::render(fullFile, output_format = "all"), utils::browseURL),
-#        "srt" = subtools::read_subtitles(fullFile, ...),
-#        "vtt" = subtools::read_subtitles(fullFile, ...),
-#        "sub" = subtools::read_subtitles(fullFile, ...),
-#        "ass" = subtools::read_subtitles(fullFile, ...),
+        #        "srt" = subtools::read_subtitles(fullFile, ...),
+        #        "vtt" = subtools::read_subtitles(fullFile, ...),
+        #        "sub" = subtools::read_subtitles(fullFile, ...),
+        #        "ass" = subtools::read_subtitles(fullFile, ...),
         stop("Sorry, but the file you have just chosen is not supported in this function. Report on this issue to the author (JooYoung Seo) at \n
 		https://github.com/jooyoungseo/ezpickr/issues. :)")
       )
