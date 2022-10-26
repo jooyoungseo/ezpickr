@@ -1,3 +1,5 @@
+# ezpickr 2.2.0
+
 # ezpickr 2.1.0
 
 * To follow the CRAN policy, removed the GitHub `subtools` dependency that was experimentally supporting subtitle files (e.g., "*.srt"; "*.vtt"; "*.sub"; "*.ass") in `pick()` function.
