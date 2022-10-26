@@ -1,5 +1,8 @@
 # ezpickr 2.2.0
 
+* Changed the first and second authors' email address as they have moved to a different institution.
+
+
 # ezpickr 2.1.0
 
 * To follow the CRAN policy, removed the GitHub `subtools` dependency that was experimentally supporting subtitle files (e.g., "*.srt"; "*.vtt"; "*.sub"; "*.ass") in `pick()` function.

@@ -31,7 +31,7 @@ if (interactive()) {
 
   ## View your data object in your spreadsheet software:
   viewxl(airquality)
-  # Then, when necessary, you can modify the opened data 
+  # Then, when necessary, you can modify the opened data
   # in the spreadsheet and save it as a new data.
 
   # You can pass a list object to the `view()` function like below:
