@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,23 +33,17 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">ezpickr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">2.2.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -64,8 +60,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/jooyoungseo/ezpickr/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/jooyoungseo/ezpickr/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -81,71 +77,71 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="1-ezpickr-convenient-package-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box-and-seamlessly-manipulating-tidy-data-between-an-excel-window-and-r-session" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#1-ezpickr-convenient-package-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box-and-seamlessly-manipulating-tidy-data-between-an-excel-window-and-r-session" class="anchor"></a>1 ezpickr: Convenient Package for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and Seamlessly Manipulating Tidy Data between an Excel Window and R Session</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="id_1-ezpickr-convenient-package-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box-and-seamlessly-manipulating-tidy-data-between-an-excel-window-and-r-session">1 ezpickr: Convenient Package for Choosing Any Rectangular Data File Using Interactive GUI Dialog Box, and Seamlessly Manipulating Tidy Data between an Excel Window and R Session<a class="anchor" aria-label="anchor" href="#id_1-ezpickr-convenient-package-for-choosing-any-rectangular-data-file-using-interactive-gui-dialog-box-and-seamlessly-manipulating-tidy-data-between-an-excel-window-and-r-session"></a>
+</h1></div>
 
 <p>The goal of ezpickr is to provide R beginners with a convenient way to pick up their data files in a tidy tibble form into an R environment using GUI file-picker dialogue box (<code><a href="reference/pick.html">ezpickr::pick()</a></code>), and to open and manipulate their data objects using Excel application for a seamless data communication between an Excel and R session (<code><a href="reference/viewxl.html">ezpickr::viewxl()</a></code>).</p>
 <p>You can alternatively use <code><a href="reference/pick.html">ezpickr::pick()</a></code> function for choosing <em>.csv, </em>.csv2, <em>.tsv, </em>.txt, <em>.xls, </em>.xlsx, <em>.json, </em>.html, <em>.htm, </em>.php, <em>.pdf, </em>.doc, <em>.docx, </em>.rtf, <em>.RData, </em>.Rda, <em>.RDS, </em>.sav (SPSS), <em>.por, </em>.sas7bdat, <em>.sas7bcat, </em>.dta, <em>.xpt, </em>.mbox, and *.Rmd files in an interactive GUI mode A file choose dialog box will be prompted.</p>
-<p>Any additional arguments available for each file type and extension: <code><a href="https://vroom.r-lib.org/reference/vroom.html">vroom::vroom()</a></code> for ‘CSV’ (Comma-Separated Values); ‘CSV2’ (Semicolon-Separated Values); ‘TSV’ (Tab-Separated Values)‘txt’ (plain text) files; <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="https://haven.tidyverse.org/reference/read_spss.html">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="https://haven.tidyverse.org/reference/read_dta.html">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="https://haven.tidyverse.org/reference/read_sas.html">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="https://rdrr.io/pkg/textreadr/man/read_document.html">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="https://rdrr.io/pkg/jsonlite/man/fromJSON.html">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="https://rdrr.io/pkg/mboxr/man/read_mbox.html">mboxr::read_mbox()</a></code> for ‘mbox’ files; <code><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">rmarkdown::render()</a></code> for ‘Rmd’ files; <code><a href="https://rdrr.io/r/base/source.html">base::source()</a></code> for ‘R’ files; <code><a href="https://rdrr.io/r/base/readRDS.html">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="https://rdrr.io/r/base/load.html">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
+<p>Any additional arguments available for each file type and extension: <code><a href="https://vroom.r-lib.org/reference/vroom.html" class="external-link">vroom::vroom()</a></code> for ‘CSV’ (Comma-Separated Values); ‘CSV2’ (Semicolon-Separated Values); ‘TSV’ (Tab-Separated Values)‘txt’ (plain text) files; <code><a href="https://readxl.tidyverse.org/reference/read_excel.html" class="external-link">readxl::read_excel()</a></code> for ‘Excel’ files; <code><a href="https://haven.tidyverse.org/reference/read_spss.html" class="external-link">haven::read_spss()</a></code> for ‘SPSS’ files; <code><a href="https://haven.tidyverse.org/reference/read_dta.html" class="external-link">haven::read_stata()</a></code> for ‘Stata’ files; <code><a href="https://haven.tidyverse.org/reference/read_sas.html" class="external-link">haven::read_sas()</a></code> for ‘SAS’ files; <code><a href="https://rdrr.io/pkg/textreadr/man/read_document.html" class="external-link">textreadr::read_document()</a></code> for ‘Microsoft Word’, ‘PDF’, ‘RTF’, ‘HTML’, ‘HTM’, and ‘PHP’ files; <code><a href="https://rdrr.io/pkg/jsonlite/man/fromJSON.html" class="external-link">jsonlite::fromJSON()</a></code> for ‘JSON’ files; <code><a href="https://rdrr.io/pkg/mboxr/man/read_mbox.html" class="external-link">mboxr::read_mbox()</a></code> for ‘mbox’ files; <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">rmarkdown::render()</a></code> for ‘Rmd’ files; <code><a href="https://rdrr.io/r/base/source.html" class="external-link">base::source()</a></code> for ‘R’ files; <code><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">base::readRDS()</a></code> for ‘RDS’ files; <code><a href="https://rdrr.io/r/base/load.html" class="external-link">base::load()</a></code> for ‘RDA’ and ‘RDATA’ files.</p>
 <p>Each corresponding function depending upon a file extension will be automatically matched and applied once you pick up your file using either the GUI-file-chooser dialog box or explicit path/to/filename.</p>
-<div id="11-installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#11-installation" class="anchor"></a>1.1 Installation</h2>
-<div id="111-development-version" class="section level3">
-<h3 class="hasAnchor">
-<a href="#111-development-version" class="anchor"></a>1.1.1 Development Version</h3>
+<div class="section level2">
+<h2 id="id_11-installation">1.1 Installation<a class="anchor" aria-label="anchor" href="#id_11-installation"></a>
+</h2>
+<div class="section level3">
+<h3 id="id_111-development-version">1.1.1 Development Version<a class="anchor" aria-label="anchor" href="#id_111-development-version"></a>
+</h3>
 <p>You can install the latest development version as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(remotes)) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>}</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">'jooyoungseo/ezpickr'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(remotes)) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">'jooyoungseo/ezpickr'</span>)</span></code></pre></div>
 </div>
-<div id="112-stable-version" class="section level3">
-<h3 class="hasAnchor">
-<a href="#112-stable-version" class="anchor"></a>1.1.2 Stable Version</h3>
-<p>You can install the released version of ezpickr from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">install.packages</span>(<span class="st">"ezpickr"</span>)</span></code></pre></div>
+<div class="section level3">
+<h3 id="id_112-stable-version">1.1.2 Stable Version<a class="anchor" aria-label="anchor" href="#id_112-stable-version"></a>
+</h3>
+<p>You can install the released version of ezpickr from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ezpickr"</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="12-example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#12-example" class="anchor"></a>1.2 Example</h2>
-<div id="121-usage-of-the-pick-function" class="section level3">
-<h3 class="hasAnchor">
-<a href="#121-usage-of-the-pick-function" class="anchor"></a>1.2.1 Usage of the <code>pick()</code> Function</h3>
+<div class="section level2">
+<h2 id="id_12-example">1.2 Example<a class="anchor" aria-label="anchor" href="#id_12-example"></a>
+</h2>
+<div class="section level3">
+<h3 id="id_121-usage-of-the-pick-function">1.2.1 Usage of the <code>pick()</code> Function<a class="anchor" aria-label="anchor" href="#id_121-usage-of-the-pick-function"></a>
+</h3>
 <p>This is a basic example which shows you how to import data files:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">library</span>(ezpickr)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="co"># Choosing file and saving it into a variable</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="co">## Scenario 1: Picking up a file using interactive GUI dialog box:</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>data &lt;-<span class="st"> </span><span class="kw">pick</span>() <span class="co">## Please use `picko()` instead if your path/file contains any Korean characters.</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="co">## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL, *.json, *.Rda, *.Rdata, and more):</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>data &lt;-<span class="st"> </span><span class="kw">pick</span>(<span class="st">"test.sav"</span>) <span class="co">## Please use `picko("test.sav")` instead if your path/file contains any Korean characters.</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="co"># Now you can use the imported file as a tibble data frame.</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="kw">str</span>(data)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ezpickr)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Choosing file and saving it into a variable</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Scenario 1: Picking up a file using interactive GUI dialog box:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">pick</span>() <span class="do">## Please use `picko()` instead if your path/file contains any Korean characters.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Scenario 2: Picking up a file using an explicit file name ("test.sav" in the example below; however, you can feed other files through this function such as *.SAS, *.DTA, *.csv, *.csv2, *.tsv, *.xlsx, *.txt, *.html, webpage URL, *.json, *.Rda, *.Rdata, and more):</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">pick</span>(<span class="st">"test.sav"</span>) <span class="do">## Please use `picko("test.sav")` instead if your path/file contains any Korean characters.</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Now you can use the imported file as a tibble data frame.</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(data)</span></code></pre></div>
 </div>
-<div id="122-usage-of-the-viewxl-function" class="section level3">
-<h3 class="hasAnchor">
-<a href="#122-usage-of-the-viewxl-function" class="anchor"></a>1.2.2 Usage of the <code>viewxl()</code> Function</h3>
+<div class="section level3">
+<h3 id="id_122-usage-of-the-viewxl-function">1.2.2 Usage of the <code>viewxl()</code> Function<a class="anchor" aria-label="anchor" href="#id_122-usage-of-the-viewxl-function"></a>
+</h3>
 <p>You can open any data.frame, tibble, matrix, table or vector from an R session into your default-set spreadsheet application window as follows:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">library</span>(ezpickr)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="kw">data</span>(airquality)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a><span class="kw">str</span>(airquality)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a><span class="co"># Use `viewxl()` function to open your data object in your spreadsheet:</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a><span class="kw">viewxl</span>(airquality)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a><span class="co"># Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a><span class="co"># You can pass a list object to the `viewxl()` function like below:</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>l &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">iris =</span> iris, <span class="dt">mtcars =</span> mtcars, <span class="dt">chickwts =</span> chickwts, <span class="dt">quakes =</span> quakes)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a><span class="kw">viewxl</span>(l)</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a><span class="co"># Then, each list item will appear in your Excel window sheet by sheet.</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ezpickr)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(airquality)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(airquality)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Use `viewxl()` function to open your data object in your spreadsheet:</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">viewxl</span>(airquality)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, when necessary, you can modify the opened data in the spreadsheet and save it as a new data.</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># You can pass a list object to the `viewxl()` function like below:</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">iris =</span> iris, <span class="at">mtcars =</span> mtcars, <span class="at">chickwts =</span> chickwts, <span class="at">quakes =</span> quakes)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">viewxl</span>(l)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, each list item will appear in your Excel window sheet by sheet.</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -153,59 +149,63 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=ezpickr">https://​cloud.r-project.org/​package=ezpickr</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/jooyoungseo/ezpickr/">https://​github.com/​jooyoungseo/​ezpickr/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/jooyoungseo/ezpickr/issues">https://​github.com/​jooyoungseo/​ezpickr/​issues</a>
-</li>
-</ul>
-</div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></li>
-</ul>
-</div>
-<div class="citation">
-<h2>Citation</h2>
-<ul class="list-unstyled">
-<li><a href="authors.html">Citing ezpickr</a></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>JooYoung Seo <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-4064-6012" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Soyoung Choi <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-0998-3352" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li><a href="authors.html">All authors...</a></li>
+<li><a href="https://cloud.r-project.org/package=ezpickr" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/jooyoungseo/ezpickr/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/jooyoungseo/ezpickr/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="http://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License: GPL v3"></a></li>
-<li><a href="https://cran.r-project.org/package=ezpickr"><img src="https://www.r-pkg.org/badges/version/ezpickr" alt="CRAN status"></a></li>
-<li><a href="https://cranlogs.r-pkg.org/badges/grand-total/ezpickr"><img src="https://cranlogs.r-pkg.org/badges/grand-total/ezpickr?color=orange" alt="Total Downloads"></a></li>
-<li><a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
-<li><a href="https://travis-ci.org/jooyoungseo/ezpickr"><img src="https://travis-ci.org/jooyoungseo/ezpickr.svg?branch=master" alt="Travis build status"></a></li>
-<li><a href="https://ci.appveyor.com/project/jooyoungseo/ezpickr"><img src="https://ci.appveyor.com/api/projects/status/github/jooyoungseo/ezpickr?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
-<li><a href="https://codecov.io/gh/jooyoungseo/ezpickr?branch=master"><img src="https://codecov.io/gh/jooyoungseo/ezpickr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing ezpickr</a></li>
+</ul>
 </div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>JooYoung Seo <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-4064-6012" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Soyoung Choi <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-0998-3352" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html">More about authors...</a></li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="http://www.gnu.org/licenses/gpl-3.0" class="external-link"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License: GPL v3"></a></li>
+<li><a href="https://cran.r-project.org/package=ezpickr" class="external-link"><img src="https://www.r-pkg.org/badges/version/ezpickr" alt="CRAN status"></a></li>
+<li><a href="https://cranlogs.r-pkg.org/badges/grand-total/ezpickr" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/ezpickr?color=orange" alt="Total Downloads"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
+<li><a href="https://travis-ci.org/jooyoungseo/ezpickr" class="external-link"><img src="https://travis-ci.org/jooyoungseo/ezpickr.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://ci.appveyor.com/project/jooyoungseo/ezpickr" class="external-link"><img src="https://ci.appveyor.com/api/projects/status/github/jooyoungseo/ezpickr?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
+<li><a href="https://codecov.io/gh/jooyoungseo/ezpickr?branch=master" class="external-link"><img src="https://codecov.io/gh/jooyoungseo/ezpickr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+</ul>
+</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by JooYoung Seo, Soyoung Choi.</p>
+  <p></p>
+<p>Developed by JooYoung Seo, Soyoung Choi.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
@@ -213,6 +213,8 @@
 
   
 
+
+  
 
   </body>
 </html>
